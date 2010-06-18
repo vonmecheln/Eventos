@@ -1,0 +1,69 @@
+<?php
+/**
+ * @abstract Plugin para tratar e válidar os dados
+ * monetários
+ * 
+ * @author Alexandre
+ * @since 19-03-2009
+ *
+ */
+class Plugin_Moeda extends Sistema_Plugin{
+	
+	private $_ponto = false;
+	
+	public function setPonto($bool){
+		$this->_ponto  = ($bool) ? true : false;
+	}
+	/**
+	 * @abstract Método para formatar os dados para inserção no banco
+	 * @param string $valor Valor a ser inserido
+	 * @return string $valor Valor a ser retornado
+	 */	
+    public function formataInsercao($valor)    {
+        if (!strpos($valor,",")) {
+            return $valor;
+        } else if(($valor=="") || ($valor === 0)) {
+            return '0';
+        } else {
+            $inserir = str_replace(",",".",str_replace(".","",$valor));
+            return $inserir;
+        }
+    }
+
+    
+	/**
+	 * @abstract Formata o valor do retorno do banco para a visualização na tela
+	 * @param string valor Valor vindo do banco
+	 * @return string valor Valor a ser vizualisado
+	 */
+	public function formataExibicao($valor)	{
+    	if (!strstr($valor,",")){
+    		$valor = number_format($valor, 2, ',', '.');	
+    	}
+    	return $valor;
+	}    
+
+    
+    /**
+	 * @abstract Cria o campo input para o CNPJ
+	 * @param String $nome_campo Nome do campo
+	 * @param Integer $tamanho Tamanho do campo
+	 * @param String $valor_campo Valor incial do campo
+	 * @return String $retorno Campo input formatado
+	 */
+	public function criaCampo($nome_campo,$tamanho = 100,$valor_campo = null) {
+		
+		$funcao = "FormataValor(this.id,10,event);";
+		# Verifica o tipo de formatacao
+		if($this->_ponto){
+			$funcao = "FormataValorPonto(this.id,10,event);";
+		}
+		
+        $layout = Sistema_Layout::instanciar();
+        $layout->includeJavaScript("javascript/mascara/mascaramoeda.js");
+        $retorno = sprintf("R$ <input type='text' name='%s' id='%s' value='%s' style='text-align:right' size='10' maxlength='20' onkeypress='%s' />",
+        					$nome_campo,$nome_campo,$valor_campo,$funcao);        
+        return $retorno;
+    }
+}
+?>

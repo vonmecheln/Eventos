@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/145/trunk/css/screen
+END
+basemod.css
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/145/trunk/css/screen/basemod.css
+END
+basemod_draft.css
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/css/screen/basemod_draft.css
+END
+content.css
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/145/trunk/css/screen/content.css
+END
+basemod_equal_heights.css
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/145/trunk/css/screen/basemod_equal_heights.css
+END
+basemod_2col_advanced.css
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/css/screen/basemod_2col_advanced.css
+END
+content_default.css
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/145/trunk/css/screen/content_default.css
+END
+basemod_3col_advanced.css
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/css/screen/basemod_3col_advanced.css
+END
+basemod_grids.css
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/css/screen/basemod_grids.css
+END
+basemod_grids2.css
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/145/trunk/css/screen/basemod_grids2.css
+END
+content_grids2.css
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/145/trunk/css/screen/content_grids2.css
+END
+forms.css
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/css/screen/forms.css
+END
+messages.css
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/css/screen/messages.css
+END

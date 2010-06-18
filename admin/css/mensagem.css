@@ -1,0 +1,146 @@
+
+/***************************************************/
+/*  ESTILOS REFERENTES A MENSAGEM		           */
+/***************************************************/
+#layout_mensagens {
+	position:absolute;
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14px;
+	left:0px;
+	margin:0px 5px 5px 0px;
+	position:absolute;
+	text-decoration:none;
+	top:100px;
+	width:100%;
+	/*height: 50px;*/
+	z-index:99;
+	padding: 10px;
+}
+
+
+#layout_mensagens #mensagem_conteudo {
+    font-size: 15px;
+    
+}
+
+
+#layout_mensagens .mensagem_fechar {
+    padding: 5px;
+}
+
+#layout_mensagens h1 {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+}
+
+/* I6 não executa este estilo */
+#layout_mensagens[id]{
+	position:fixed;
+}
+/* Estilo para a div com o texto para FECHAR */
+#layout_fecharmsg {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	color:#FFFFFF;
+	width:100%;
+	z-index:100;
+	font-weight:bold;
+	text-decoration: none;
+}
+/* EstiloS do Link para FECHAR*/
+#layout_fecharmsg a {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+#layout_fecharmsg a:hover {
+	color:#FFDFDF;
+	text-decoration: none;
+}
+
+/* Mensagem Simples */
+.mensagem {
+    display: none;
+}
+
+/* Mensagem de Erro */
+.mensagemerro {
+	background-color:#ffbfbf;
+	border-bottom:2px solid #FF0000;
+	border-top:2px solid #FF0000;
+	color:#990000;
+	font-size: 20px;
+	padding: 50px;
+	display: block;
+	color:#FF0000;
+	font-weight: bold;	
+}
+.mensagemerro .mensagem_fechar {
+	
+}
+/* Mensagem de Sucesso */
+.mensagemsucesso {
+	background-color:#DCFF77;
+	border-bottom:2px solid #58A938;
+	border-top:2px solid #58A938;
+	display: block;
+	font-size: 20px;
+	padding: 50px;	
+	color:#58A938;
+	font-weight: bold;
+}
+.mensagemsucesso .mensagem_fechar {
+	/*background-color:#41541C;*/
+}
+/* Mensagem de Alerta */
+.mensagemalerta {
+	background-color:#ffffe6;
+	border-bottom:2px solid #FFCC00;
+	border-top:2px solid #FFCC00;	
+	display: block;
+	font-size: 20px;
+	padding: 50px;	
+	color:#FFCC00;
+	font-weight: bold;	
+}
+.mensagemalerta .mensagem_fechar {
+	
+}
+
+/* Link para os botoes na mensagem */
+.link_botao_msg {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+	height: 30px;
+	padding: 5px;
+	margin: 2px;
+	border: 1px solid #666666;
+	background-color: #FFFFFF;
+}
+
+.link_botao_msg:hover {
+   color:#111;   
+}
+
+.link_botao_msg_img {
+	vertical-align:bottom;
+    margin:0px 5px 0px 0px;
+}
+.link_form_msg{
+	margin:0px;
+	padding:0px;
+	display: inline;
+}
+
+.inputerro {
+    background-color:#FFDFDF;
+    border: 1px solid red;
+}
+

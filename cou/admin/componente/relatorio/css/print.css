@@ -1,0 +1,10 @@
+@MEDIA print{
+	#div-menu, #layout_botoes, #topo_right, #busca-relatorio {
+		display:	none;
+		visibility: hidden;
+	}	
+	#layout_conteudo{
+		overflow: inherit;
+	}
+}
+

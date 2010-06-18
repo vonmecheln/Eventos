@@ -1,0 +1,76 @@
+<?php
+/**
+ * @abstract Modulo responsavel pela gerancia das instituições participantes
+ * 
+ * @copyright  -
+ * @version    1.0
+ * @author     Alexandre Semmer
+ * @since      10/03/2009 
+ * 
+ */
+class Modulo_Instituicao extends Sistema_Modulo{
+
+	protected $_modulo = "instituicao";
+
+	/**
+	 * @abstract Ação que monta o formulário para cadastrar/altera a instituicao
+	 * @return Form
+	 */
+	public function acaoFormInstituicao(){
+		$objeto = new Classe_Instituicao($_GET['inst_cod']);
+		$form = new Componente_Formulario($objeto);
+		$l = Sistema_Layout::instanciar();
+		
+		$this->_layout->setBotoes("Nova Instituição",Sistema_Util::getURL($this->_modulo,"forminstituicao"),"imagens/form.png");
+		$this->_layout->setBotoes("Listar Instituições",Sistema_Util::getURL($this->_modulo,"listarinstituicoes"),"imagens/list.png");
+		
+		$l->setNomePagina("Instituição participante");
+		$l->setCorpo($form->getForm($this->_modulo,"salvarinstituicao"));
+	}
+	
+	/**
+	 * @abstract Ação que altera a senha vinda do formulario
+	 * @return JSON
+	 */	
+	public function ajaxsalvarinstituicao(){
+		$obj = new Classe_Instituicao();
+		$obj->setDados($_POST);
+		$id = $obj->salvar();
+		$json = new Sistema_Ajax();
+		$json->addVar($id);
+		$json->responde();
+	}
+	
+	/**
+	 * @abstract Ação que lista as anotações do sistema
+	 * @return Strig
+	 */	
+	public function acaolistarinstituicoes(){
+		$lista = new Componente_Listagem('listainstitu');
+		$sql = "SELECT
+						inst_cod,
+						inst_nome,
+						inst_contato,
+						inst_telefone
+				FROM instituicao
+				";
+		$lista->setSQL($sql);
+		$lista->setColuna("inst_cod","Código","5%");
+		$lista->setColuna("inst_nome","Nome");
+		$lista->setColuna("inst_contato","Contato");
+		$lista->setColuna("inst_telefone","Telefone");
+
+		$lista->setNomeParametro("inst_cod");
+		$lista->setBotaoModuloAcao("Alterar",$this->_modulo,"forminstituicao",Componente_Listagem::$_IMG_ALTERAR);
+
+
+		# Cria o botão para novo usuário
+		$this->_layout->setBotoes("Nova Instituição",Sistema_Util::getURL($this->_modulo,"forminstituicao"),"imagens/form.png");
+		$this->_layout->setNomePagina("Listar Instituições");
+		$this->_layout->setCorpo($lista->getForm());
+	}
+	
+	
+	
+}
+?>

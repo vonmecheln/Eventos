@@ -1,0 +1,174 @@
+@CHARSET "ISO-8859-1";
+/*******************************
+    Estilos do Formulário
+********************************/
+
+fieldset {
+	padding: 10px;
+	width:95%;
+}
+
+
+form .label,label {
+	font-weight:bold;
+	width: 100px;
+	padding: 0px 0px 0px 0px;
+	text-align:right;
+	margin: 0px 0px 10px 0px;
+	color:#222;
+}
+
+form .radio {
+    cursor: pointer;
+}
+form legend {
+	font-size: 16px;
+	font-weight:bold;
+	padding: 0px 10px 0px 10px;
+}
+
+form input[type!="image"], form select {
+    border:1px solid #999;
+	margin:5px 0px 10px 0px;
+    vertical-align: middle;
+    height:18px; 
+    color:#222;
+    weigth:bold;
+    font-size:100%;    
+    padding : 0px;
+}
+
+input [type = image] {
+    border: 0px solid #000;
+}
+
+form input {    
+    padding-left:4px;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+	background: #EEE; /* Fundo amarelo palha  ffe */
+	/*border: 1px solid #c30; /* Borda vermelha de 2px */
+}
+
+form textarea  {
+    border:1px solid #999;
+	margin:0px 0px 15px 0px;
+    vertical-align: top;
+    font-weight:bold;
+    padding-left:3px;
+    padding-botton:-1px;
+    color:#222;
+    
+}
+form em {
+    padding: 0px 0px 15px 0px;
+    margin:0px 0px 15px 0px;
+    display: compact;
+    vertical-align: top;
+    height:18px;
+}
+form img {
+	vertical-align: absmiddle;
+}
+
+.botaoSaltado{
+	background-color:#000000;
+    background: url(../imagens/menu.jpg) repeat-x scroll 0 0;
+    border: 1px solid #000000;
+    color:#FFFFFF;
+    cursor : pointer;
+    height: 30px;
+    width: 80px;
+    margin:2px;
+}
+
+
+.formsubtitulo {
+    float: left;
+	font-size: 16px;
+	font-weight:bold;
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid black;
+	clear:both;
+	display:block;
+	width: 98%;
+}
+
+
+
+.form_td_label {
+	text-align:right;
+	vertical-align: top;
+	padding: 7px 10px 0px 0px;
+	font-weight: bold;
+	color: #333;
+}
+.form_td_label label{
+	cursor: pointer;
+}
+
+.form_td_titulo {
+    font-size:20px;
+    color: #333;
+    padding: 15px 0px 10px 0px;
+    letter-spacing: -1px;
+    text-transform:capitalize;
+}
+
+.form_td_bullet {
+    text-align: right;
+    font-size: 25px;
+    color: #EC8C03;
+}
+
+.form_tabela td fieldset{
+    width: 200px;
+	-moz-border-radius-topleft: 1em;
+	-moz-border-radius-topright: 1em;
+    -moz-border-radius-bottomleft: 1em;
+	-moz-border-radius-bottomright: 1em;
+	border: 1px solid #FFE990;
+}
+
+
+.form_tabela {
+    border: 1px solid #ddd;
+	-moz-border-radius-topleft: 1em;
+	-moz-border-radius-topright: 1em;
+    -moz-border-radius-bottomleft: 1em;
+	-moz-border-radius-bottomright: 1em;
+}
+
+.form_tabela h2 {
+    color: #333;
+    margin: 5px 0px;
+}
+
+.form_tabela select{
+    width: 300px;
+    font-size: 13px;
+}
+
+.form_tabela select, .form_tabela input, .form_tabela textarea {
+    /*text-transform:uppercase;*/
+    border: 1px solid #AAA;
+}
+
+.form_tabela select:focus, .form_tabela input:focus, .form_tabela textarea:focus {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+.form_tabela textarea {
+    width: 550px;
+}
+
+.form_td_botao {
+    padding: 20px 0px 10px 3px;
+}
+
+.form_td_botao input{
+    text-transform:capitalize;
+}

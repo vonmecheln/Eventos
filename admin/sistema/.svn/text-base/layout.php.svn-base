@@ -1,0 +1,226 @@
+<?php
+require_once SISTEMA_DIR.'sistema/smarty/Smarty.class.php';
+/**
+ * @abstract Classe responsavel pela manipulação do layout do sistema.
+ *
+ * @copyright  -
+ * @version    1.0
+ * @author     -
+ * @since      10/03/2009
+ */
+class Sistema_Layout extends Smarty{
+	/**
+	 * @abstract Variavel que irá conter o
+	 * objeto SingleTon da classe Controle
+	 * @var Sistema_Controle
+	 */
+	static private $_instancia = null;
+
+	private $corpo; 	 // armazena o conteúdo da página
+	private $modulo;     // armazena o nome do módulo
+	private $acao;       // armazena o nome da ação
+	private $usuario;    // armazena o nome do usuário
+	private $extra;      // armazena o conteudo que é pra ficar fora (abaixo) do div de conteudo
+	private $onload;     // javscript executado no onload da página
+	private $_botoes = null;
+	private $inc_javaScripts = null;
+	private $inc_css         = null;
+	private $nomepagina = "Sistema ";
+	private $_funcoesjs = array();
+
+	/**
+	 * @abstract Construtor impossibilita a instancia
+	 * da classe, somente se for utilizado o metodo
+	 * statico instanciar
+	 * @return Sistema_Controle
+	 */
+	private function __construct(){
+		$this->template_dir = SISTEMA_DIR . 'templates';
+		$this->compile_dir  = SISTEMA_DIR . 'templates/templates_c';
+		$this->config_dir   = SISTEMA_DIR . 'templates/configs';
+		$this->cache_dir    = SISTEMA_DIR . 'templates/cache';
+		$this->caching = false;
+		$this->assign('sistema_url',SISTEMA_URL);
+		$this->inicializaCabecalho();
+		
+		$this->includeCss(SISTEMA_URL."/javascript/tooltip/css/tooltip.css");
+		$this->includeJavaScript(SISTEMA_URL."/javascript/tooltip/js/tooltip.js");
+	}
+
+	/**
+	 * @abstract Fornece o objeto SingleTon da classe
+	 * @return Sistema_Controle
+	 */
+	public static function instanciar()	{
+		# Verifica se a classe ja foi instanciada uma vez
+		if (!self::$_instancia instanceof self) {
+			# Instancia a classe
+			self::$_instancia = new self();
+		}
+		# Retorna a instancia
+		return self::$_instancia;
+	}
+
+	/**
+	 * @abstract Seta no cabecalho padrão os JavaScripts e CSS iniciais
+	 * e que são padrão no sistemas
+	 *
+	 */
+	private function inicializaCabecalho()
+	{
+		# Arquivos CSS
+		$this->includeCss(SISTEMA_URL."css/menu2.css");
+		$this->includeCss(SISTEMA_URL."css/template.css");
+		$this->includeCss(SISTEMA_URL."css/mensagem.css");
+		$this->includeCss(SISTEMA_URL."css/formulario.css");
+
+		# Arquivos JavaScript
+		$this->includeJavaScript(SISTEMA_URL."javascript/prototype1.6.js");
+		$this->includeJavaScript(SISTEMA_URL."javascript/menu.js");
+		$this->includeJavaScript(SISTEMA_URL."javascript/sistema.js");
+		
+		# Botões padrões
+		 $this->setBotoes("Principal",SISTEMA_URL,"imagens/home.png");
+	}
+
+	/**
+	 * setCorpo
+	 *
+	 * @abstract adiciona conteúdo ao corpo da página
+	 */
+	public function setCorpo($corpo)
+	{
+		$this->corpo .= "\n".$corpo;
+	}
+
+	
+	
+	/**
+	 * Armazena o nome dos arquivos em JavaScript que devem ser adicionados ao sistema
+	 *
+	 * @param String $arquivo
+	 */
+	public function includeJavaScript($arquivo)
+	{
+		$this->inc_javaScripts[$arquivo] = true;
+	}
+
+	public function getJavaScript(){
+		return $this->inc_javaScripts;
+	}
+	
+	/**
+	 * Armazena o nome dos arquivos em CSS que devem ser adicionados ao sistema
+	 *
+	 * @param String $arquivo
+	 */
+	public function includeCss($arquivo) {
+		$this->inc_css[$arquivo] = true;
+	}
+
+	public function getCss(){
+		return $this->inc_css;
+	}
+	
+	/**
+	 * Adiciona um conteudo extra, fora da div de conteudo
+	 *
+	 * @param unknown_type $extra
+	 */
+	public function setExtra($extra)
+	{
+		$this->extra .= "\n".$extra;
+	}
+
+	/**
+	 *  @abstract coloca um javascript no onload da página
+	 * @param script string scrpt que será executado quando a página for executada.
+	 * */
+	public function setOnload($script){
+		$this->onload = $script;
+	}
+
+
+	/**
+	 * @abstract Seta o nome da página
+	 * @param $nome
+	 */
+	public function setNomePagina($nome){
+		$this->nomepagina = ucwords(strtolower($nome));
+	}
+
+
+	public function exibir($template = null) {
+
+		$msg = Sistema_Mensagem::instanciar();
+
+		# Inclui os cabeçalhos JavaScript
+		if ($this->inc_javaScripts != null) {
+			$inc_cabecalho = "<!-- JavaScript -->\n";
+			foreach ($this->inc_javaScripts AS $arquivo=>$nulo) {
+				$inc_cabecalho .= "\t<script type='text/javascript' src='".$arquivo."'></script> \n";
+			}
+			$inc_cabecalho .= "\n\n\n";
+		}
+		$this->cabecalho = $inc_cabecalho . $this->cabecalho;
+
+		# Inclui os cabeçalhos CSS
+		if ($this->inc_css != null) {
+			$this->cabecalho .="<!-- Folhas de estilos -->\n";
+
+			foreach ($this->inc_css AS $arquivo=>$nulo) {
+				$this->cabecalho .= "\t<link rel='stylesheet' type='text/css' media='all' href='".$arquivo."' />\n";
+			}
+
+			$this->cabecalho .= "\n\n\n";
+		}
+
+		$this->assign('cabecalho'   ,$this->cabecalho);
+		
+		if ($template == null) {
+						
+			# Inclui as mensagens na tela
+			$this->assign('mensagem',$msg->getMensagem());
+			$this->assign('tipo_msg',$msg->getTipo());
+
+
+			$menu = new Sistema_Menu();
+			$this->assign('menu'        ,$menu->getMenu());
+			$this->assign('corpo'       ,$this->corpo);
+			$this->assign('info'        ,$this->info);
+			$this->assign('nome_pagina' ,$this->nomepagina);
+			$this->assign('extra'       ,$this->extra);
+			$this->assign('nome_usuario',$this->usuario);
+			$this->assign('onload',     $this->onload);
+			$this->assign('funcaojs',   $this->getFuncoesJS());
+			$this->assign('botoes',$this->getBotoes());
+			
+			
+			$info = sprintf(" Seja bem vindo, <b>%s</b>. %s",$_SESSION['login']['nome'],date("d/m/Y H:i:s"));
+			$this->assign('infotopo',$info);
+			
+			$this->display('index.tpl');
+		} else {
+			$this->display($template);
+		}
+	}
+	
+	public function setFuncoesJS($funcao){
+		$this->_funcoesjs[] = $funcao;
+	}
+	public function getFuncoesJS(){
+		return implode("\n/* Função */\n",$this->_funcoesjs);
+	}		
+	
+	public function setBotoes($nome,$link,$img){
+		$botao = sprintf("<a href='%s' title='%s'><img src='%s' border=0 align='absmiddle' >&nbsp;%s</a>",$link,$nome,SISTEMA_URL.$img,$nome);
+		$this->_botoes[] = $botao;	
+	}
+
+	public function getBotoes(){
+		if(is_array($this->_botoes)){
+			return implode("&nbsp;<b>|</b>&nbsp;",$this->_botoes);
+		}	
+	}	
+}
+?>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/88/trunk/admin/templates
+END
+index.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/5/trunk/admin/templates/index.tpl
+END
+login.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/85/trunk/admin/templates/login.tpl
+END
+janela.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/5/trunk/admin/templates/janela.tpl
+END
+formulario.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/5/trunk/admin/templates/formulario.tpl
+END

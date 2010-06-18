@@ -1,0 +1,76 @@
+<?php
+/**
+ * @abstract Modulo responsavel pela gerancia das instituições participantes
+ * 
+ * @copyright  -
+ * @version    1.0
+ * @author     Alexandre Semmer
+ * @since      10/03/2009 
+ * 
+ */
+class Modulo_Programacao extends Sistema_Modulo{
+
+	protected $_modulo = "programacao";
+
+	/**
+	 * @abstract Ação que monta o formulário para cadastrar/altera a instituicao
+	 * @return Form
+	 */
+	public function acaoFormProgramacao(){
+		$objeto = new Classe_Programacao($_GET['prg_cod']);
+		$form = new Componente_Formulario($objeto);
+		$l = Sistema_Layout::instanciar();
+		
+		$this->_layout->setBotoes("Nova Programação",Sistema_Util::getURL($this->_modulo,"formprogramacao"),"imagens/form.png");
+		$this->_layout->setBotoes("Listar Programações",Sistema_Util::getURL($this->_modulo,"listarprogramacao"),"imagens/list.png");
+		
+		$l->setNomePagina("Programação");
+		$l->setCorpo($form->getForm($this->_modulo,"salvarprogramacao"));
+	}
+	
+	/**
+	 * @abstract Ação que altera a senha vinda do formulario
+	 * @return JSON
+	 */	
+	public function ajaxsalvarprogramacao(){
+		$obj = new Classe_Programacao();
+		$obj->setDados($_POST);
+		$id = $obj->salvar();
+		$json = new Sistema_Ajax();
+		$json->addVar($id);
+		$json->responde();
+	}
+	
+	/**
+	 * @abstract Ação que lista as anotações do sistema
+	 * @return Strig
+	 */	
+	public function acaolistarprogramacao(){
+		$lista = new Componente_Listagem('listaprog');
+		$sql = "SELECT
+						prg_cod,
+						DATE_FORMAT(prg_data, '%d/%m/%Y') as prg_data,
+						prg_tema,
+						prg_palestrante
+				FROM programacao
+				";
+		$lista->setSQL($sql);
+		$lista->setColuna("prg_cod","Código","5%");
+		$lista->setColuna("prg_data","Data");
+		$lista->setColuna("prg_tema","Tema");
+		$lista->setColuna("prg_palestrante","Palestrante");
+
+		$lista->setNomeParametro("prg_cod");
+		$lista->setBotaoModuloAcao("Alterar",$this->_modulo,"formprogramacao",Componente_Listagem::$_IMG_ALTERAR);
+
+
+		# Cria o botão para novo usuário
+		$this->_layout->setBotoes("Nova Programação",Sistema_Util::getURL($this->_modulo,"formprogramacao"),"imagens/form.png");
+		$this->_layout->setNomePagina("Listar Programações");
+		$this->_layout->setCorpo($lista->getForm());
+	}
+	
+	
+	
+}
+?>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/5/trunk/admin/sistema/retorno
+END
+error_log.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/5/trunk/admin/sistema/retorno/error_log.txt
+END
+retornoPagamentoDigital.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/5/trunk/admin/sistema/retorno/retornoPagamentoDigital.php
+END
+retornoPagseguro.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/5/trunk/admin/sistema/retorno/retornoPagseguro.php
+END

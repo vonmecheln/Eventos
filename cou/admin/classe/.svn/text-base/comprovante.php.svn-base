@@ -1,0 +1,17 @@
+<?php
+class Classe_Comprovante extends Sistema_Persistencia {
+	
+	protected $_classe = "Classe_Comprovante";
+	protected $_tabela = "comprovante";
+	protected $_campos = array("cmp_cod"=>array("Código","chave",),
+								"cmp_img"=>array("Comprovante","texto",120,true),
+								"cmp_data"=>array("Data","data",100,false),
+								"stt_cod"=>array("Status","inteiro","",false),
+								"usr_cod"=>array("Usuario","inteiro","",false),
+								"cmp_obs"=>array("Observação","texto",200,false)
+								);
+	protected $_chavepk   = "cmp_cod";
+	protected $_descritor = "cmp_img";
+		
+}
+?>

@@ -1,0 +1,641 @@
+<?php
+/*~ class.phpmailer.php
+.---------------------------------------------------------------------------.
+|  Software: PHPMailer - PHP email class                                    |
+|   Version: 5.0.2                                                          |
+|   Contact: via sourceforge.net support pages (also www.codeworxtech.com)  |
+|      Info: http://phpmailer.sourceforge.net                               |
+|   Support: http://sourceforge.net/projects/phpmailer/                     |
+| ------------------------------------------------------------------------- |
+|     Admin: Andy Prevost (project admininistrator)                         |
+|   Authors: Andy Prevost (codeworxtech) codeworxtech@users.sourceforge.net |
+|          : Marcus Bointon (coolbru) coolbru@users.sourceforge.net         |
+|   Founder: Brent R. Matzelle (original founder)                           |
+| Copyright (c) 2004-2009, Andy Prevost. All Rights Reserved.               |
+| Copyright (c) 2001-2003, Brent R. Matzelle                                |
+| ------------------------------------------------------------------------- |
+|   License: Distributed under the Lesser General Public License (LGPL)     |
+|            http://www.gnu.org/copyleft/lesser.html                        |
+| This program is distributed in the hope that it will be useful - WITHOUT  |
+| ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or     |
+| FITNESS FOR A PARTICULAR PURPOSE.                                         |
+| ------------------------------------------------------------------------- |
+| We offer a number of paid services (www.codeworxtech.com):                |
+| - Web Hosting on highly optimized fast and secure servers                 |
+| - Technology Consulting                                                   |
+| - Oursourcing (highly qualified programmers and graphic designers)        |
+'---------------------------------------------------------------------------'
+*/
+
+/**
+ * PHPMailer - PHP email transport class
+ * NOTE: Requires PHP version 5 or later
+ * @package PHPMailer
+ * @author Andy Prevost
+ * @author Marcus Bointon
+ * @copyright 2004 - 2009 Andy Prevost
+ * @version $Id: class.phpmailer.php 447 2009-05-25 01:36:38Z codeworxtech $
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+if (version_compare(PHP_VERSION, '5.0.0', '<') ) exit("Sorry, this version of PHPMailer will only run on PHP version 5 or greater!\n");
+
+class PHPMailer {
+
+  /////////////////////////////////////////////////
+  // PROPERTIES, PUBLIC
+  /////////////////////////////////////////////////
+
+  /**
+   * Email priority (1 = High, 3 = Normal, 5 = low).
+   * @var int
+   */
+  public $Priority          = 3;
+
+  /**
+   * Sets the CharSet of the message.
+   * @var string
+   */
+  public $CharSet           = 'iso-8859-1';
+
+  /**
+   * Sets the Content-type of the message.
+   * @var string
+   */
+  public $ContentType       = 'text/plain';
+
+  /**
+   * Sets the Encoding of the message. Options for this are
+   *  "8bit", "7bit", "binary", "base64", and "quoted-printable".
+   * @var string
+   */
+  public $Encoding          = '8bit';
+
+  /**
+   * Holds the most recent mailer error message.
+   * @var string
+   */
+  public $ErrorInfo         = '';
+
+  /**
+   * Sets the From email address for the message.
+   * @var string
+   */
+  public $From              = 'root@localhost';
+
+  /**
+   * Sets the From name of the message.
+   * @var string
+   */
+  public $FromName          = 'Root User';
+
+  /**
+   * Sets the Sender email (Return-Path) of the message.  If not empty,
+   * will be sent via -f to sendmail or as 'MAIL FROM' in smtp mode.
+   * @var string
+   */
+  public $Sender            = '';
+
+  /**
+   * Sets the Subject of the message.
+   * @var string
+   */
+  public $Subject           = '';
+
+  /**
+   * Sets the Body of the message.  This can be either an HTML or text body.
+   * If HTML then run IsHTML(true).
+   * @var string
+   */
+  public $Body              = '';
+
+  /**
+   * Sets the text-only body of the message.  This automatically sets the
+   * email to multipart/alternative.  This body can be read by mail
+   * clients that do not have HTML email capability such as mutt. Clients
+   * that can read HTML will view the normal Body.
+   * @var string
+   */
+  public $AltBody           = '';
+
+  /**
+   * Sets word wrapping on the body of the message to a given number of
+   * characters.
+   * @var int
+   */
+  public $WordWrap          = 0;
+
+  /**
+   * Method to send mail: ("mail", "sendmail", or "smtp").
+   * @var string
+   */
+  public $Mailer            = 'mail';
+
+  /**
+   * Sets the path of the sendmail program.
+   * @var string
+   */
+  public $Sendmail          = '/usr/sbin/sendmail';
+
+  /**
+   * Path to PHPMailer plugins.  Useful if the SMTP class
+   * is in a different directory than the PHP include path.
+   * @var string
+   */
+  public $PluginDir         = '';
+
+  /**
+   * Sets the email address that a reading confirmation will be sent.
+   * @var string
+   */
+  public $ConfirmReadingTo  = '';
+
+  /**
+   * Sets the hostname to use in Message-Id and Received headers
+   * and as default HELO string. If empty, the value returned
+   * by SERVER_NAME is used or 'localhost.localdomain'.
+   * @var string
+   */
+  public $Hostname          = '';
+
+  /**
+   * Sets the message ID to be used in the Message-Id header.
+   * If empty, a unique id will be generated.
+   * @var string
+   */
+  public $MessageID         = '';
+
+  /////////////////////////////////////////////////
+  // PROPERTIES FOR SMTP
+  /////////////////////////////////////////////////
+
+  /**
+   * Sets the SMTP hosts.  All hosts must be separated by a
+   * semicolon.  You can also specify a different port
+   * for each host by using this format: [hostname:port]
+   * (e.g. "smtp1.example.com:25;smtp2.example.com").
+   * Hosts will be tried in order.
+   * @var string
+   */
+  public $Host          = 'localhost';
+
+  /**
+   * Sets the default SMTP server port.
+   * @var int
+   */
+  public $Port          = 25;
+
+  /**
+   * Sets the SMTP HELO of the message (Default is $Hostname).
+   * @var string
+   */
+  public $Helo          = '';
+
+  /**
+   * Sets connection prefix.
+   * Options are "", "ssl" or "tls"
+   * @var string
+   */
+  public $SMTPSecure    = '';
+
+  /**
+   * Sets SMTP authentication. Utilizes the Username and Password variables.
+   * @var bool
+   */
+  public $SMTPAuth      = false;
+
+  /**
+   * Sets SMTP username.
+   * @var string
+   */
+  public $Username      = '';
+
+  /**
+   * Sets SMTP password.
+   * @var string
+   */
+  public $Password      = '';
+
+  /**
+   * Sets the SMTP server timeout in seconds.
+   * This function will not work with the win32 version.
+   * @var int
+   */
+  public $Timeout       = 10;
+
+  /**
+   * Sets SMTP class debugging on or off.
+   * @var bool
+   */
+  public $SMTPDebug     = false;
+
+  /**
+   * Prevents the SMTP connection from being closed after each mail
+   * sending.  If this is set to true then to close the connection
+   * requires an explicit call to SmtpClose().
+   * @var bool
+   */
+  public $SMTPKeepAlive = false;
+
+  /**
+   * Provides the ability to have the TO field process individual
+   * emails, instead of sending to entire TO addresses
+   * @var bool
+   */
+  public $SingleTo      = false;
+
+  /**
+   * Provides the ability to change the line ending
+   * @var string
+   */
+  public $LE              = "\n";
+
+  /**
+   * Sets the PHPMailer Version number
+   * @var string
+   */
+  public $Version         = '5.0.2';
+
+  /////////////////////////////////////////////////
+  // PROPERTIES, PRIVATE AND PROTECTED
+  /////////////////////////////////////////////////
+
+  private   $smtp           = NULL;
+  private   $to             = array();
+  private   $cc             = array();
+  private   $bcc            = array();
+  private   $ReplyTo        = array();
+  private   $all_recipients = array();
+  private   $attachment     = array();
+  private   $CustomHeader   = array();
+  private   $message_type   = '';
+  private   $boundary       = array();
+  protected $language       = array();
+  private   $error_count    = 0;
+  private   $sign_cert_file = "";
+  private   $sign_key_file  = "";
+  private   $sign_key_pass  = "";
+  private   $exceptions     = false;
+
+  /////////////////////////////////////////////////
+  // CONSTANTS
+  /////////////////////////////////////////////////
+
+  const STOP_MESSAGE = 0; // message only, continue processing
+  const STOP_CONTINUE = 1; // message?, likely ok to continue processing
+  const STOP_CRITICAL = 2; // message, plus full stop, critical error reached
+
+  /////////////////////////////////////////////////
+  // METHODS, VARIABLES
+  /////////////////////////////////////////////////
+
+  /**
+   * Constructor
+   * @param boolean $exceptions Should we throw external exceptions?
+   */
+  public function __construct($exceptions = false) {
+    $this->exceptions = ($exceptions == true);
+  }
+
+  /**
+   * Sets message type to HTML.
+   * @param bool $ishtml
+   * @return void
+   */
+  public function IsHTML($ishtml = true) {
+    if ($ishtml) {
+      $this->ContentType = 'text/html';
+    } else {
+      $this->ContentType = 'text/plain';
+    }
+  }
+
+  /**
+   * Sets Mailer to send message using SMTP.
+   * @return void
+   */
+  public function IsSMTP() {
+    $this->Mailer = 'smtp';
+  }
+
+  /**
+   * Sets Mailer to send message using PHP mail() function.
+   * @return void
+   */
+  public function IsMail() {
+    $this->Mailer = 'mail';
+  }
+
+  /**
+   * Sets Mailer to send message using the $Sendmail program.
+   * @return void
+   */
+  public function IsSendmail() {
+    if (!stristr(ini_get('sendmail_path'), 'sendmail')) {
+      $this->Sendmail = '/var/qmail/bin/sendmail';
+    }
+    $this->Mailer = 'sendmail';
+  }
+
+  /**
+   * Sets Mailer to send message using the qmail MTA.
+   * @return void
+   */
+  public function IsQmail() {
+    if (stristr(ini_get('sendmail_path'), 'qmail')) {
+      $this->Sendmail = '/var/qmail/bin/sendmail';
+    }
+    $this->Mailer = 'sendmail';
+  }
+
+  /////////////////////////////////////////////////
+  // METHODS, RECIPIENTS
+  /////////////////////////////////////////////////
+
+  /**
+   * Adds a "To" address.
+   * @param string $address
+   * @param string $name
+   * @return boolean true on success, false if address already used
+   */
+  public function AddAddress($address, $name = '') {
+    return $this->AddAnAddress('to', $address, $name);
+  }
+
+  /**
+   * Adds a "Cc" address.
+   * Note: this function works with the SMTP mailer on win32, not with the "mail" mailer.
+   * @param string $address
+   * @param string $name
+   * @return boolean true on success, false if address already used
+   */
+  public function AddCC($address, $name = '') {
+    return $this->AddAnAddress('cc', $address, $name);
+  }
+
+  /**
+   * Adds a "Bcc" address.
+   * Note: this function works with the SMTP mailer on win32, not with the "mail" mailer.
+   * @param string $address
+   * @param string $name
+   * @return boolean true on success, false if address already used
+   */
+  public function AddBCC($address, $name = '') {
+    return $this->AddAnAddress('bcc', $address, $name);
+  }
+
+  /**
+   * Adds a "Reply-to" address.
+   * @param string $address
+   * @param string $name
+   * @return boolean
+   */
+  public function AddReplyTo($address, $name = '') {
+    return $this->AddAnAddress('ReplyTo', $address, $name);
+  }
+
+  /**
+   * Adds an address to one of the recipient arrays
+   * Addresses that have been added already return false, but do not throw exceptions
+   * @param string $kind One of 'to', 'cc', 'bcc', 'ReplyTo'
+   * @param string $address The email address to send to
+   * @param string $name
+   * @return boolean true on success, false if address already used or invalid in some way
+   * @access private
+   */
+  private function AddAnAddress($kind, $address, $name = '') {
+    if (!preg_match('/^(to|cc|bcc|ReplyTo)$/', $kind)) {
+      echo 'Invalid recipient array: ' . kind;
+      return false;
+    }
+    $address = trim($address);
+    $name = trim(preg_replace('/[\r\n]+/', '', $name)); //Strip breaks and trim
+    if (!self::ValidateAddress($address)) {
+      $this->SetError($this->Lang('invalid_address').': '. $address);
+      if ($this->exceptions) {
+        throw new phpmailerException($this->Lang('invalid_address').': '.$address);
+      }
+      echo $this->Lang('invalid_address').': '.$address;
+      return false;
+    }
+  if ($kind != 'ReplyTo') {
+    if (!isset($this->all_recipients[strtolower($address)])) {
+        array_push($this->$kind, array($address, $name));
+        $this->all_recipients[strtolower($address)] = true;
+    return true;
+      }
+  } else {
+    if (!array_key_exists(strtolower($address), $this->ReplyTo)) {
+        $this->ReplyTo[strtolower($address)] = array($address, $name);
+    return true;
+    }
+  }
+    return false;
+  }
+
+/**
+ * Set the From and FromName properties
+ * @param string $address
+ * @param string $name
+ * @return boolean
+ */
+  public function SetFrom($address, $name = '') {
+    $address = trim($address);
+    $name = trim(preg_replace('/[\r\n]+/', '', $name)); //Strip breaks and trim
+    if (!self::ValidateAddress($address)) {
+      $this->SetError($this->Lang('invalid_address').': '. $address);
+      if ($this->exceptions) {
+        throw new phpmailerException($this->Lang('invalid_address').': '.$address);
+      }
+      echo $this->Lang('invalid_address').': '.$address;
+      return false;
+    }
+  $this->From = $address;
+  $this->FromName = $name;
+  return true;
+  }
+
+  /**
+   * Check that a string looks roughly like an email address should
+   * Static so it can be used without instantiation
+   * Tries to use PHP built-in validator in the filter extension (from PHP 5.2), falls back to a reasonably competent regex validator
+   * Conforms approximately to RFC2822
+   * @link http://www.hexillion.com/samples/#Regex Original pattern found here
+   * @param string $address The email address to check
+   * @return boolean
+   * @static
+   * @access public
+   */
+  public static function ValidateAddress($address) {
+    if (function_exists('filter_var')) { //Introduced in PHP 5.2
+      if(filter_var($address, FILTER_VALIDATE_EMAIL) === FALSE) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return preg_match('/^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!\.)){0,61}[a-zA-Z0-9_-]?\.)+[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!$)){0,61}[a-zA-Z0-9_]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/', $address);
+    }
+  }
+
+  /////////////////////////////////////////////////
+  // METHODS, MAIL SENDING
+  /////////////////////////////////////////////////
+
+  /**
+   * Creates message and assigns Mailer. If the message is
+   * not sent successfully then it returns false.  Use the ErrorInfo
+   * variable to view description of the error.
+   * @return bool
+   */
+  public function Send() {
+    try {
+      if ((count($this->to) + count($this->cc) + count($this->bcc)) < 1) {
+        throw new phpmailerException($this->Lang('provide_address'), self::STOP_CRITICAL);
+      }
+
+      // Set whether the message is multipart/alternative
+      if(!empty($this->AltBody)) {
+        $this->ContentType = 'multipart/alternative';
+      }
+
+      $this->error_count = 0; // reset errors
+      $this->SetMessageType();
+      $header = $this->CreateHeader();
+      $body = $this->CreateBody();
+
+      if (empty($this->Body)) {
+        throw new phpmailerException($this->Lang('empty_message'), self::STOP_CRITICAL);
+      }
+
+      // Choose the mailer and send through it
+      switch($this->Mailer) {
+        case 'sendmail':
+          return $this->SendmailSend($header, $body);
+        case 'smtp':
+          return $this->SmtpSend($header, $body);
+        case 'mail':
+        default:
+          return $this->MailSend($header, $body);
+      }
+
+    } catch (phpmailerException $e) {
+      $this->SetError($e->getMessage());
+      if ($this->exceptions) {
+        throw $e;
+      }
+      echo $e->getMessage()."\n";
+      return false;
+    }
+  }
+
+  /**
+   * Sends mail using the $Sendmail program.
+   * @param string $header The message headers
+   * @param string $body The message body
+   * @access protected
+   * @return bool
+   */
+  protected function SendmailSend($header, $body) {
+    if ($this->Sender != '') {
+      $sendmail = sprintf("%s -oi -f %s -t", escapeshellcmd($this->Sendmail), escapeshellarg($this->Sender));
+    } else {
+      $sendmail = sprintf("%s -oi -t", escapeshellcmd($this->Sendmail));
+    }
+    if(!@$mail = popen($sendmail, 'w')) {
+      throw new phpmailerException($this->Lang('execute') . $this->Sendmail, self::STOP_CRITICAL);
+    }
+    fputs($mail, $header);
+    fputs($mail, $body);
+    $result = pclose($mail);
+    if($result != 0) {
+      throw new phpmailerException($this->Lang('execute') . $this->Sendmail, self::STOP_CRITICAL);
+    }
+    return true;
+  }
+
+  /**
+   * Sends mail using the PHP mail() function.
+   * @param string $header The message headers
+   * @param string $body The message body
+   * @access protected
+   * @return bool
+   */
+  protected function MailSend($header, $body) {
+    $toArr = array();
+    foreach($this->to as $t) {
+      $toArr[] = $this->AddrFormat($t);
+    }
+    $to = implode(', ', $toArr);
+
+    $params = sprintf("-oi -f %s", $this->Sender);
+    if ($this->Sender != '' && strlen(ini_get('safe_mode'))< 1) {
+      $old_from = ini_get('sendmail_from');
+      ini_set('sendmail_from', $this->Sender);
+      if ($this->SingleTo === true && count($toArr) > 1) {
+        foreach ($toArr as $key => $val) {
+          $rt = @mail($val, $this->EncodeHeader($this->SecureHeader($this->Subject)), $body, $header, $params);
+        }
+      } else {
+        $rt = @mail($to, $this->EncodeHeader($this->SecureHeader($this->Subject)), $body, $header, $params);
+      }
+    } else {
+      if ($this->SingleTo === true && count($toArr) > 1) {
+        foreach ($toArr as $key => $val) {
+          $rt = @mail($val, $this->EncodeHeader($this->SecureHeader($this->Subject)), $body, $header, $params);
+        }
+      } else {
+        $rt = @mail($to, $this->EncodeHeader($this->SecureHeader($this->Subject)), $body, $header);
+      }
+    }
+    if (isset($old_from)) {
+      ini_set('sendmail_from', $old_from);
+    }
+    if(!$rt) {
+      throw new phpmailerException($this->Lang('instantiate'), self::STOP_CRITICAL);
+    }
+    return true;
+  }
+
+  /**
+   * Sends mail via SMTP using PhpSMTP
+   * Returns false if there is a bad MAIL FROM, RCPT, or DATA input.
+   * @param string $header The message headers
+   * @param string $body The message body
+   * @uses SMTP
+   * @access protected
+   * @return bool
+   */
+  protected function SmtpSend($header, $body) {
+    require_once $this->PluginDir . 'class.smtp.php';
+    $bad_rcpt = array();
+
+    if(!$this->SmtpConnect()) {
+      throw new phpmailerException($this->Lang('smtp_connect_failed'), self::STOP_CRITICAL);
+    }
+    $smtp_from = ($this->Sender == '') ? $this->From : $this->Sender;
+    if(!$this->smtp->Mail($smtp_from)) {
+      throw new phpmailerException($this->Lang('from_failed') . $smtp_from, self::STOP_CRITICAL);
+    }
+
+    // Attempt to send attach all recipients
+    foreach($this->to as $to) {
+      if (!$this->smtp->Recipient($to[0])) {
+        $bad_rcpt[] = $to[0];
+      }
+    }
+    foreach($this->cc as $cc) {
+      if (!$this->smtp->Recipient($cc[0])) {
+        $bad_rcpt[] = $cc[0];
+      }
+    }
+    foreach($this->bcc as $bcc) {
+      if (!$this->smtp->Recipient($bcc[0])) {
+        $bad_rcpt[] = $bcc[0];
+      }
+    }
+    if (count($bad_rcpt) > 0 ) { //Create error message for any bad addresses
+      $badaddresses = implode(', ', $bad_rcpt);
+      throw new phpmailerException($this->Lang('recipients_failed') . $badaddresses);
+    }
+    if(!$this->smtp

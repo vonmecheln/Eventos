@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/2/trunk/css/core
+END
+base.css
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/css/core/base.css
+END
+slim_print_base.css
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/css/core/slim_print_base.css
+END
+slim_iehacks.css
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/css/core/slim_iehacks.css
+END
+slim_base.css
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/css/core/slim_base.css
+END
+print_base.css
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/css/core/print_base.css
+END
+iehacks.css
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/css/core/iehacks.css
+END

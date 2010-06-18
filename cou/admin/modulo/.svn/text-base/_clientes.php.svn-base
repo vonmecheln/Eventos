@@ -1,0 +1,305 @@
+<?php
+/**
+ * @abstract Módulo referente as ações para os cadastros
+ * e gerênciamento de usuarios, grupos e permissõs ao
+ * sistema
+ *
+ * @copyright  -
+ * @version    1.0
+ * @author     Alexandre Semmer
+ * @since      10/03/2009
+ */
+class Modulo_Clientes extends Sistema_Modulo{
+
+	protected $_modulo = "clientes";
+
+
+	/**
+	 * @abstract Ação que monta o formulário de cadastro/alteração
+	 * dos usuários do sistema
+	 * @return String
+	 */
+	public function acaoFormClientes(){
+
+		$objeto = new Classe_Cliente($_GET['user_id']);
+		$form = new Componente_Formulario($objeto,"form1");
+
+		$this->_layout->setNomePagina("Cadastrar Clientes");
+		# Cria o botão para novo usuário
+		$this->_layout->setBotoes("Novo Cliente",Sistema_Util::getURL("clientes","formclientes"),"imagens/form.png");
+		# Cria o botão para listar usuários
+		$this->_layout->setBotoes("Listar Clientes",Sistema_Util::getURL("clientes","listarclientes"),"imagens/list.png");
+		$this->_layout->setCorpo($form->getForm($this->_modulo,"salvarclientes"));
+	}
+
+	/**
+	 * @abstract Ação que lista os usuários cadastros no sistema
+	 * @return Strig
+	 */
+	public function acaoListarClientes(){
+
+		$lista = new Componente_Listagem('listclientes');
+		$sql = "SELECT
+						user_id,
+						user_nome,
+						user_cnpj_cpf,
+						user_email 
+				FROM es_aut_usuarios";
+		$lista->setSQL($sql);
+
+		$lista->setColuna("user_id","Código","5%");
+		$lista->setColuna("user_nome","Nome");
+		$lista->setColuna("user_cnpj_cpf","CPF/CNPJ");
+		$lista->setColuna("user_email","E-mail");
+
+		$lista->setSelecionado("user_nome");
+		$lista->setNomeParametro("user_id");
+
+		$lista->setBotaoModuloAcao("Alterar",$this->_modulo,"formclientes",Componente_Listagem::$_IMG_ALTERAR);
+		$lista->setBotaoJanela("Venda para o Cliente",$this->_modulo,"venda","imagens/cart.png");
+
+
+		# Cria o botão para novo usuário
+		$this->_layout->setBotoes("Novo Cliente",Sistema_Util::getURL($this->_modulo,"formclientes"),"imagens/form.png");
+		$this->_layout->setNomePagina("Listar Clientes");
+		$this->_layout->setCorpo($lista->getForm());
+	}
+
+	/**
+	 * @abstract Ação responsavel por salvar as informações
+	 * vindas do formulário
+	 * @return JSON
+	 */
+	public function ajaxSalvarClientes(){
+
+		//salvar a cidade e estado como string tbm
+		$sql = sprintf("SELECT cid_nome,est_cod FROM cidade WHERE cid_cod=%d",$_POST['cid_cod']);
+		$rs = Sistema_Conecta::Execute($sql,PDO::FETCH_ASSOC);
+		if(count($rs) > 0){
+			$_POST['user_cidade'] = $rs[0]['cid_nome'];
+			$_POST['user_uf'] = $rs[0]['est_cod'];
+		}
+
+
+		$obj = new Classe_Cliente();
+		$obj->setDados($_POST);
+		$id = $obj->salvar();
+		$json = new Sistema_Ajax();
+		$json->addVar($id);
+		$json->responde();
+	}
+
+
+	public function ajaxvenda(){
+
+		if(!isset($_GET['user_id'])){
+			echo "<pre>";
+			print_r($_POST);
+			echo "</pre>";
+			die();
+		}
+
+		$user_id = $_GET['user_id'];
+		$cliente = new Classe_Cliente($user_id);
+		$dados = $cliente->getDados();
+
+
+		# Monta o campo Moeda
+		$moeda = new Plugin_Moeda();
+		$moeda->setPonto(true);
+		$valor = $moeda->criaCampo("produto_valor_1",11);
+
+
+		$venda = new Modulo_Clientes_Venda();
+
+		# Mostra os CSS e Javascript
+		echo $venda->getJSCSS();
+
+
+		$template = new Sistema_Layout_Tela("modulo/clientes/template/tela_venda.tpl");
+		$template->addVar("campo_cpf_cnpj",$dados['user_cnpj_cpf']);
+		$template->addVar("campo_cliente",$dados['user_nome']);
+
+
+		/* @todo Falta informar os dados */
+		# max 11 caracteres. Usar "." para separar os decimais
+		$template->addVar("valor_produto",$valor);
+		# max 80 caracteres
+		$email_loja = "pagamento@zeroacucar.ind.br";
+		$template->addVar("email_loja",$email_loja);
+		# max 50 caracteres alfa
+		$produto_codigo = 0;
+		$template->addVar("produto_codigo",$produto_codigo);
+		# max 255 caracteres alfa
+		$produto_descricao = "produto genérico";
+		$template->addVar("produto_descricao",$produto_descricao);
+		# max 11 caracteres numéricos
+		$produto_qtde = 1;
+		$template->addVar("produto_qtde",$produto_qtde);
+		# max 3 caracteres alfa Tipos: PAD (Padrão)
+		$tipo_integracao = "PAD";
+		$template->addVar("tipo_integracao",$tipo_integracao);
+		# max 11 numericos. Valor total do frete
+		$produto_frete = 0;
+		$template->addVar("produto_frete",$produto_frete);
+
+		# ---------- Dados do cliente -------------------------
+		# max 80 string. Email do cliente
+		$template->addVar("email",$dados['user_email']);
+		# max 80 string. Nome do cliente
+		$template->addVar("nome",$dados['user_nome']);
+		# max 17 string. CPF do cliente
+		$cpfcnpj = str_replace(".","",str_replace("/","",str_replace("-","",$dados['user_cnpj_cpf'])));
+		$template->addVar("cpf",$cpfcnpj);
+		# max 20 string. Telefone do cliente
+		$fone = trim(str_replace(" ","",str_replace("(","",str_replace(")","",str_replace("-","",$dados['user_telefone'])))));
+		$template->addVar("telefone",$fone);
+		# max 100 string. Endereço do Cliente
+		$template->addVar("endereco",$dados['user_endereco']);
+		# max 80 string. Complemento do Endereço do Cliente
+		$template->addVar("complemento",$dados['user_complemento']);
+		# max 50 string. bairro do Endereço do Cliente
+		$template->addVar("bairro",$dados['user_bairro']);
+		# max 255 string. Cidade do Cliente
+		$template->addVar("numero",$dados['user_numero']);
+		# max 255 string. Cidade do Cliente
+		$template->addVar("cidade",$dados['user_cidade']);
+		# max 2 string. Estado da Cidade do Cliente
+		$template->addVar("estado",$dados['user_uf']);
+		# max 9 string. CEP do Cliente
+		$cep = trim(str_replace(" ","",str_replace("-","",$dados['user_cep'])));
+		$template->addVar("cep",$cep);
+		# max 255 string. Informações adicionais
+		$free = "Bazar";
+		$template->addVar("free",$free);
+		# max 255 string. Url de retorno
+		$url_retorno = SISTEMA_INDEX . "?" . MODULO . "=clientes&" . ACAO . "=retornovenda";
+		//$url_retorno = SISTEMA_URL . "teste1.php";
+		$template->addVar("url_retorno",$url_retorno);
+
+		echo $template->getTela();
+
+	}
+
+
+	public function acaoretornovenda(){
+		// Variáveis de retorno
+		
+		
+		// Obtenha seu TOKEN entrando no menu Ferramentas do Pagamento Digital
+		$token = "79959701D0D99B078B7C";
+
+
+		/* Montando as variáveis de retorno */
+
+		$post1 = $_POST;
+		
+
+	
+		
+		$id_transacao = $_POST['id_transacao'];
+		$data_transacao = $_POST['data_transacao'];
+		$data_credito = $_POST['data_credito'];
+		$valor_original = $_POST['valor_original'];
+		$valor_loja = $_POST['valor_loja'];
+		$tipo_pagamento = $_POST['tipo_pagamento'];
+		$parcelas = $_POST['parcelas'];
+		$cliente_nome = $_POST['cliente_nome'];
+		$cliente_email = $_POST['cliente_email'];
+		$cliente_cpf = $_POST['cliente_cpf'];
+		$cliente_endereco = $_POST['cliente_endereco'];
+		$cliente_complemento = $_POST['cliente_complemento'];
+		$status = $_POST['status'];
+		$cod_status = $_POST['cod_status'];
+		$cliente_bairro = $_POST['cliente_bairro'];
+		$cliente_cidade = $_POST['cliente_cidade'];
+		$cliente_estado = $_POST['cliente_estado'];
+		$cliente_cep = $_POST['cliente_cep'];
+		$frete = $_POST['frete'];
+		$tipo_frete = $_POST['tipo_frete'];
+		$informacoes_loja = $_POST['informacoes_loja'];
+		$id_pedido = $_POST['id_pedido'];
+		$free = $_POST['free'];
+
+		/* Essa variável indica a quantidade de produtos retornados */
+		$qtde_produtos = $_POST['qtde_produtos'];
+
+		/* Verificando ID da transação */
+		/* Verificando status da transação */
+		/* Verificando valor original */
+		/* Verificando valor da loja */
+/*
+		$post = "transacao=$id_transacao" .
+					"&status=$status" .
+					"&valor_original=$valor_original" .
+					"&valor_loja=$valor_loja" .
+					"&token=$token";
+		$enderecoPost = "https://www.pagamentodigital.com.br/checkout/verify/";
+
+		ob_start();
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $enderecoPost);
+			curl_setopt($ch, CURLOPT_POST, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,0);
+			curl_setopt($ch, CURLOPT_HEADER, false);			
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);						
+				
+			//$resposta1 = curl_exec($ch);
+			$resposta = ob_get_contents();
+			curl_close($ch);
+		ob_end_clean();
+		
+		echo '-'.$resposta1.'-'.$resposta;
+*/
+		/* No servidro nao funcionou o curl */
+		$params = array(
+				"transacao" 	   	=> $id_transacao, 
+				"status" 	   	=> $status, 
+				"valor_original"	   	=> $valor_original,
+				"valor_loja"	   	=> $valor_loja,
+				"token"		   	=> $token
+				); 
+	
+		$postdata = http_build_query($params);
+		$enderecoPost = "https://www.pagamentodigital.com.br/checkout/verify/";
+		$opts = array('http' =>
+			array(
+				'method'  => 'POST',
+				'header'  => "Content-type: application/x-www-form-urlencoded \r\n",
+				'content' => $postdata
+			)
+		);
+
+		$context  = stream_context_create($opts);
+		$resposta = file_get_contents($enderecoPost, false, $context);
+		
+		
+		if(trim($resposta)=="VERIFICADO"){
+			$vendaobj = new Modulo_Clientes_Venda();
+			// Loop para retornar dados dos produtos
+			for ($x=1; $x <= $qtde_produtos; $x++) {
+
+				$produto_codigo = $_POST['produto_codigo_'.$x];
+				$produto_descricao = $_POST['produto_descricao_'.$x];
+				$produto_qtde = $_POST['produto_qtde_'.$x];
+				$produto_valor = $_POST['produto_valor_'.$x];
+				$produto_extra = $_POST['produto_extra_'.$x];
+
+				/*
+				 Após obter as variáveis dos produtos, grava no banco de dados.
+				 Se produto já existe, atualiza os dados, senão cria novo pedido.
+				 */
+				# Grava os dados no banco
+				$id = $vendaobj->gravaVendas($post1);
+			}
+			# mostra o layout do comprovante
+			echo $vendaobj->mostraComprovante($id);
+		}
+		
+		die();
+	}
+
+}
+?>
