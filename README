@@ -45,7 +45,7 @@ $ git commit -a -m "Primeiro commit"
 
 Informando o endereço do seu repositório no GitHub.com
 
-$ git remote add origin git@github.com:seu-usuario-no-Github/nome-do-projeto-criado.git
+$ git remote add origin git@github.com:anselmobattisti/Eventos.git
 
 Exemplo:
 
@@ -54,6 +54,11 @@ $ git remote add origin git@github.com:jcmaciel/Sysobras.git
 
 h1. Primeiro Push
 
-$ git pull  git@github.com:anselmobattisti/Eventos.git
+$ git pull git@github.com:anselmobattisti/Eventos.git (baixa o repositorio)
     
 $ git push origin master
+
+h1, Como enviar um mudança para o servidor
+$ git commit -a -m "relead" (eviar para o seu repositorio local)
+$ git push origin master (envia para o repositorio remoto)
+
