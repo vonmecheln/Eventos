@@ -1,6 +1,0 @@
-<?php 
-include '../../config.php';
-$mod = new Modulo_Inscricao();
-$mod->ajaxsalvarsenha();
-
-?>
