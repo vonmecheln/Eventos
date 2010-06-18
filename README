@@ -1,3 +1,59 @@
-Este eh um teste
+h1. Adiocionar chave public no Github
 
-sdfs dfasdfasdf
+Para este passo precisamos gerar primeiramente uma chave public em seu linux.
+Execute o comando no terminal:
+
+$ ssh-keygen -t rsa
+
+
+Aperte enter em todas as perguntas sem especificar nada.
+Após isto copie o conteúdo do arquivo ~/.ssh/id_pub.rsa
+
+$ cat ~/.ssh/id_pub.rsa
+
+Vá no link Account. Clique no add another public key e cole o conteúdo do id_pub.rsa copiado no passo acima no espaço.
+
+Para testar execute no terminal o seguinte comando:
+
+$ ssh git@github.com
+
+Se der certo você vai ver uma menssagem de boas vindas.
+
+h1. Criar e configurar o projeto local
+
+Crie uma pasta
+
+$ mkdir projeto
+
+Crie um arquivo teste dentro da pasta
+
+$ cd projeto
+$ echo Aprendendo a usar Github.com > README
+
+Inicie um projeto git e adicione o arquivo
+
+$ git init
+$ git add README
+$ git add . (para mandar todas as pastas)
+
+h1. Efetuar o primeiro commit e push
+
+Primeiro commit
+
+$ git commit -a -m "Primeiro commit"
+
+
+Informando o endereço do seu repositório no GitHub.com
+
+$ git remote add origin git@github.com:seu-usuario-no-Github/nome-do-projeto-criado.git
+
+Exemplo:
+
+$ git remote add origin git@github.com:jcmaciel/Sysobras.git
+
+
+h1. Primeiro Push
+
+$ git pull  git@github.com:anselmobattisti/Eventos.git
+    
+$ git push origin master
