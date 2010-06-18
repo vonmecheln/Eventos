@@ -1,5 +1,5 @@
 <?php
-// verifica se está logado
+// verifica se esta logado
 $form = new Componente_Formulario(new Classe_Usuario(),"inscricao");
 $campos = $form->getCampos();
 
@@ -15,7 +15,7 @@ foreach($campos as $k=>$v){
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_nome">Sou</label>
 							<select name="tpp_nome" id="tpp_nome" onChange="insc.tipoParticipante(this.value)">
-								<option value="Acadêmico">Acadêmico</option>
+								<option value="Acadï¿½mico">Acadï¿½mico</option>
 								<option value="Profissional">Profissional</option>
 								<option value="THD / ACD">THD / ACD</option>
 							</select>
@@ -25,7 +25,7 @@ $campos_form .= sprintf('<div class="type-text">
 							<input type="text" name="tpp_desc" id="tpp_desc" value=""/>
 						</div>');
 $campos_form .= sprintf('<div class="type-text">
-							<label for="tpp_cracha" id="tpp_cracha">Nome no Crachá</label>
+							<label for="tpp_cracha" id="tpp_cracha">Nome no Crachï¿½</label>
 							<input type="text" name="tpp_cracha" id="tpp_cracha" value=""/>
 						</div>');							
 ?>
@@ -40,8 +40,8 @@ $campos_form .= sprintf('<div class="type-text">
 				</div>
 			</div>
 		<div class="mensagemalerta"	style="padding: 10px; font-size: 12px; padding-left: 10px;">
-				<h3>Instruções</h3>
-				( <b style="color: red;">! </b> ) Campo Obrigatório
+				<h3>Instruï¿½ï¿½es</h3>
+				( <b style="color: red;">! </b> ) Campo Obrigatï¿½rio
 				<br>
 				Utilize seu e-mail como login</div>
 		<form id="frmInscricao" class='yform' onSubmit="return formulario.enviaFormInscricao('frmInscricao'); return false;">
@@ -59,16 +59,16 @@ $campos_form .= sprintf('<div class="type-text">
 	<div class="c38r">
 		<div class="subcr">
 			<div class="info">
-			<h2>Adesão</h2>
+			<h2>Adesï¿½o</h2>
 			<table width="100%" border="0">
 				<tr>
-					<th>Taxa de Adesão</th>
-					<th>até 01/agosto</th>
-					<th style='color:red'>até 26/setembro</th>
+					<th>Taxa de Adesï¿½o</th>
+					<th>atï¿½ 01/agosto</th>
+					<th style='color:red'>atï¿½ 26/setembro</th>
 					<th>no evento</th>
 				</tr>
 				<tr>
-					<td>Acadêmicos</td>
+					<td>Acadï¿½micos</td>
 					<td>R$ 45,00</td>
 					<td>R$ 50,00</td>
 					<td>R$ 60,00</td>
@@ -86,16 +86,16 @@ $campos_form .= sprintf('<div class="type-text">
 					<td>R$ 30,00</td>
 				</tr>											
 			</table>
-				<p>*A adesão dará direito ao congressista a participar de todas as atividades científicas</p>
+				<p>*A adesï¿½o darï¿½ direito ao congressista a participar de todas as atividades cientï¿½ficas</p>
 				
 				<h2>Pagamento</h2>
-				<h3> O Pagamento da taxa de inscrição deve ser feito através de depósito bancário <br/> <br/> 
-				<b>Banco:</b>Caixa Econômica Federal <br/>
-				<b>Agência :</b>3181 <br/>
+				<h3> O Pagamento da taxa de inscriï¿½ï¿½o deve ser feito atravï¿½s de depï¿½sito bancï¿½rio <br/> <br/> 
+				<b>Banco:</b>Caixa Econï¿½mica Federal <br/>
+				<b>Agï¿½ncia :</b>3181 <br/>
 				<b>Conta Corrente:</b> 61-0<br/>
-				<b>Operação:</b> 003
+				<b>Operaï¿½ï¿½o:</b> 003
 				<br/><br/>
-				Para validar a inscrição tire uma fotografia ou escaneie o comprovante de depósito e envie <a href='index.php?p=login'>clicando aqui</a>.
+				Para validar a inscriï¿½ï¿½o tire uma fotografia ou escaneie o comprovante de depï¿½sito e envie <a href='index.php?p=login'>clicando aqui</a>.
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,5 @@
 <?	
+       // este eh um teset
 	require_once "admin/config.php";
  
 	// classe de login 
