@@ -1,19 +1,20 @@
 <?php
+//teste
 /**
- * Modelo da estrutura para padronizar as páginas do site
+ * Modelo da estrutura para padronizar as pï¿½ginas do site
  */
 ?>
 
 	<div class="subcolumns">
           <div class="c62l">
             <div class="subcl">
-            		<!-- CONTEÚDO PRINCIPAL DO LADO ESQUERDO -->
+            		<!-- CONTEï¿½DO PRINCIPAL DO LADO ESQUERDO -->
               </div>
           </div>
 
           <div class="c38r">
             <div class="subcr">
-            	<!-- CONTEÚDO SECUNDÁRIO DO LADO DIREITO -->
+            	<!-- CONTEï¿½DO SECUNDï¿½RIO DO LADO DIREITO -->
 				<div class="info">
 					<?php include'downloads.php'; ?>
 				</div>
