@@ -1,1 +1,9 @@
 # arquvio com as atualizações do banco
+
+DELETE FROM modulo WHERE mdl_cod = 12;
+
+DELETE FROM `evento`.`acao` WHERE `acao`.`acao_cod` =36;
+
+DELETE FROM `evento`.`acao` WHERE `acao`.`acao_cod` =37;
+
+DELETE FROM `evento`.`acao` WHERE `acao`.`acao_cod` =38;
