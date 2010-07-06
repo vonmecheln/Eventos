@@ -2,7 +2,7 @@
 /**
  * @abstract Módulo referente as ações do desenvolvimento do sistema
  *
- * @copyright  -
+ * @copyright  - 
  * @version    1.0
  * @author     Alexandre
  * @since      10/03/2009
