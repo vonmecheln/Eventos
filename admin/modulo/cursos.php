@@ -182,7 +182,8 @@ class Modulo_Cursos extends Sistema_Modulo{
 		$this->_layout->setCorpo($lista->getForm());
 	}
 	
-	public function ajaxCancelarEntrada(){
+	public function ajaxCancelarEntrada()
+	{
 		if($_POST['cod'] > 0){
 			$del = sprintf("DELETE FROM entrada_cursos WHERE etcr_cod = %d",$_POST['cod']);
 			if(Sistema_Conecta::Execute($del)){
@@ -191,8 +192,6 @@ class Modulo_Cursos extends Sistema_Modulo{
 				echo "err";
 			}
 		}
-		
-		
 	}
 }
 ?>
