@@ -11,6 +11,7 @@ class Classe_Participante extends Sistema_Persistencia {
 								);
 	protected $_chavepk   = "tpp_cod";
 	protected $_descritor = "tpp_nome";
+	protected $_estrangeiros = array("usr_cod"=>"Classe_Usuario");
 		
 }
 ?>
