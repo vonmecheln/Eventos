@@ -1,4 +1,5 @@
 <?php
+require_once 'trabalhos/selectArray.php';
 // verifica se esta logado
 $form = new Componente_Formulario(new Classe_Usuario(),"inscricao");
 $campos = $form->getCampos();
@@ -29,32 +30,25 @@ $campos_form .= sprintf('<div class="type-text">
 							<input type="text" name="tpp_cracha" id="tpp_cracha" value=""/>
 						</div>');
 
-$campos_form .= sprintf('<div class="type-text">
-							<label for="trabalho1" id="trabalho1">Trabalho 1</label>
-              <select name="trabalho1" id="trabalho1">
-                <option>Não Enviarei </option>
-                <option>Poster + R$ 20,00</option>
-                <option>Tema Livre + R$ 30,00</option>                                
-							</select>
-						</div>');
+$vetTpPart = array(""=>"Não Enviarei","Tema Livre"=>"Tema Livre + R$ 30,00","Poster"=>"Poster + R$ 20,00");
 
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho1',$rs['tpp_trabalho1']);
 $campos_form .= sprintf('<div class="type-text">
-							<label for="trabalho2" id="trabalho2">Trabalho 2</label>
-							<select name="trabalho2" id="trabalho2">
-                <option>Não Enviarei </option>
-                <option>Poster + R$ 20,00</option>
-                <option>Tema Livre + R$ 30,00</option>                                
-							</select>
-						</div>');
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
 
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho2',$rs['tpp_trabalho2']);
 $campos_form .= sprintf('<div class="type-text">
-							<label for="trabalho3" id="trabalho3">Trabalho 3</label>
-							<select name="trabalho3" id="trabalho3">
-                <option>Não Enviarei </option>
-                <option>Poster + R$ 20,00</option>
-                <option>Tema Livre + R$ 30,00</option>                                
-							</select>
-						</div>');
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
+
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho3',$rs['tpp_trabalho3']);
+$campos_form .= sprintf('<div class="type-text">
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
 
 ?>
 

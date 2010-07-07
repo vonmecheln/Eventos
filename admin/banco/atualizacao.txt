@@ -1,10 +1,10 @@
 # arquvio com as atualizações do banco
 
-alter table participante add column trabalho1 varchar(50);
+alter table participante add column tpp_trabalho1 varchar(50);
 
-alter table participante add column trabalho2 varchar(50);
+alter table participante add column tpp_trabalho2 varchar(50);
 
-alter table participante add column trabalho3 varchar(50);
+alter table participante add column tpp_trabalho3 varchar(50);
 
 DELETE FROM modulo WHERE mdl_cod = 12;
 

@@ -6,8 +6,6 @@ $login = Sistema_Login::instanciar();
 $form = new Componente_Formulario(new Classe_Usuario($login->getCodigo()),"inscricao");
 $campos = $form->getCampos();
 
-
-
 foreach($campos as $k=>$v){
 	// nao mostra a senha
 	if($k != 9){
@@ -18,7 +16,7 @@ foreach($campos as $k=>$v){
 	}
 }
 
-$sql = "SELECT tpp_nome, tpp_desc, tpp_cracha FROM participante WHERE usr_cod=".$login->getCodigo();
+$sql = "SELECT * FROM participante WHERE usr_cod=".$login->getCodigo();
 $rs = Sistema_Conecta::Execute($sql,PDO::FETCH_ASSOC);
 $rs = $rs[0];
 
@@ -31,10 +29,8 @@ $campos_form .= sprintf('<div class="type-text">
 							%s
 						</div>',$select);
 						
-						
 $tpp_desc = ($rs['tpp_nome']=="Acadêmico") ? "Universidade" : "Inscrição feita pela secretaria de saúde do município de";						
 					
-						
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_desc" id="nome_desc">%s</label>
 							<input type="text" name="tpp_desc" id="tpp_desc" value="%s"/>
@@ -42,7 +38,27 @@ $campos_form .= sprintf('<div class="type-text">
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_cracha" id="tpp_cracha">Nome no Crachá</label>
 							<input type="text" name="tpp_cracha" id="tpp_cracha" value="%s"/>
-						</div>',$rs['tpp_cracha']);						
+						</div>',$rs['tpp_cracha']);
+
+$vetTpPart = array(""=>"Não Enviarei","Tema Livre"=>"Tema Livre + R$ 30,00","Poster"=>"Poster + R$ 20,00");
+
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho1',$rs['tpp_trabalho1']);
+$campos_form .= sprintf('<div class="type-text">
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
+
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho2',$rs['tpp_trabalho2']);
+$campos_form .= sprintf('<div class="type-text">
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
+
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho3',$rs['tpp_trabalho3']);
+$campos_form .= sprintf('<div class="type-text">
+							<label for="tpp_nome">Sou</label>
+							%s
+						</div>',$select);
 ?>
 			<div id="layout_mensagens" align="center" class="mensagem{$tipo_msg}"	style="display: none">
 				<div id="mensagem_conteudo"></div>

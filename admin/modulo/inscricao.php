@@ -46,6 +46,10 @@ class Modulo_Inscricao extends Sistema_Modulo{
 		$dados['tpp_nome']=$_POST['tpp_nome'];
 		$dados['tpp_desc']=$_POST['tpp_desc'];
 		$dados['tpp_cracha']=$_POST['tpp_cracha'];
+    $dados['tpp_trabalho1']=$_POST['tpp_trabalho1'];
+    $dados['tpp_trabalho2']=$_POST['tpp_trabalho2'];
+    $dados['tpp_trabalho3']=$_POST['tpp_trabalho3'];        
+
 		$part = new Classe_Participante();
 		$part->setDados($dados);
 		$a = $part->salvar();

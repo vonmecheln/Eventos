@@ -1,0 +1,18 @@
+<?php
+// verifica se esta logado
+$form = new Componente_Formulario(new Classe_Usuario(),"inscricao");
+$campos = $form->getCampos();
+
+foreach($campos as $k=>$v){
+
+	$campos_form .= sprintf('<div class="type-text">
+							%s
+							%s
+						</div>',$v['label'],$v['input']);
+}
+
+// Tipo do paticipante
+$campos_form .= sprintf('<div class="type-text">
+							<label for="tpp_nome">Sou</label>
+							<select name="tpp_nome" id="tpp_nome" onChange="insc.tipoParticipante(this.value)">
+								<option value="Acad

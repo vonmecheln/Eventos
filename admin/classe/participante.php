@@ -7,7 +7,10 @@ class Classe_Participante extends Sistema_Persistencia {
 								"tpp_nome"=>array("Tipo","texto",60,true),
 								"tpp_desc"=>array("Descrição","texto",100,false),
 								"usr_cod"=>array("Usuario","inteiro","",false),
-								"tpp_cracha"=>array("Nome no Crachá","texto",60,false)
+								"tpp_cracha"=>array("Nome no Crachá","texto",60,false),
+                "tpp_trabalho1"=>array("Trabalho","texto",50,false),
+                "tpp_trabalho2"=>array("Trabalho","texto",50,false),
+                "tpp_trabalho3"=>array("Trabalho","texto",50,false)
 								);
 	protected $_chavepk   = "tpp_cod";
 	protected $_descritor = "tpp_nome";
