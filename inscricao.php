@@ -15,19 +15,47 @@ foreach($campos as $k=>$v){
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_nome">Sou</label>
 							<select name="tpp_nome" id="tpp_nome" onChange="insc.tipoParticipante(this.value)">
-								<option value="Acadï¿½mico">Acadï¿½mico</option>
+								<option value="Acadêmico">Acadêmico</option>
 								<option value="Profissional">Profissional</option>
-								<option value="THD / ACD">THD / ACD</option>
 							</select>
 						</div>');
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_desc" id="nome_desc">Universidade</label>
 							<input type="text" name="tpp_desc" id="tpp_desc" value=""/>
 						</div>');
+						
 $campos_form .= sprintf('<div class="type-text">
-							<label for="tpp_cracha" id="tpp_cracha">Nome no Crachï¿½</label>
+							<label for="tpp_cracha" id="tpp_cracha">Nome no Crachá</label>
 							<input type="text" name="tpp_cracha" id="tpp_cracha" value=""/>
-						</div>');							
+						</div>');
+
+$campos_form .= sprintf('<div class="type-text">
+							<label for="trabalho1" id="trabalho1">Trabalho 1</label>
+              <select name="trabalho1" id="trabalho1">
+                <option>Não Enviarei </option>
+                <option>Poster + R$ 20,00</option>
+                <option>Tema Livre + R$ 30,00</option>                                
+							</select>
+						</div>');
+
+$campos_form .= sprintf('<div class="type-text">
+							<label for="trabalho2" id="trabalho2">Trabalho 2</label>
+							<select name="trabalho2" id="trabalho2">
+                <option>Não Enviarei </option>
+                <option>Poster + R$ 20,00</option>
+                <option>Tema Livre + R$ 30,00</option>                                
+							</select>
+						</div>');
+
+$campos_form .= sprintf('<div class="type-text">
+							<label for="trabalho3" id="trabalho3">Trabalho 3</label>
+							<select name="trabalho3" id="trabalho3">
+                <option>Não Enviarei </option>
+                <option>Poster + R$ 20,00</option>
+                <option>Tema Livre + R$ 30,00</option>                                
+							</select>
+						</div>');
+
 ?>
 
 <div class="subcolumns">
@@ -40,17 +68,15 @@ $campos_form .= sprintf('<div class="type-text">
 				</div>
 			</div>
 		<div class="mensagemalerta"	style="padding: 10px; font-size: 12px; padding-left: 10px;">
-				<h3>Instruï¿½ï¿½es</h3>
-				( <b style="color: red;">! </b> ) Campo Obrigatï¿½rio
+				<h3>Instruções</h3>
+				( <b style="color: red;">! </b> ) Campo Obrigatório
 				<br>
 				Utilize seu e-mail como login</div>
 		<form id="frmInscricao" class='yform' onSubmit="return formulario.enviaFormInscricao('frmInscricao'); return false;">
 			<fieldset>
 				<legend>Dados do Participante</legend>
 					<?php echo $campos_form; ?>
-
 					<div class='type-button'><input type="submit" value="Salvar" id="submit" name="submit"  /></div>
-					
 			</fieldset>
 		</form>
 		</div>
@@ -59,43 +85,27 @@ $campos_form .= sprintf('<div class="type-text">
 	<div class="c38r">
 		<div class="subcr">
 			<div class="info">
-			<h2>Adesï¿½o</h2>
+			<h2>Inscrição</h2>
 			<table width="100%" border="0">
 				<tr>
-					<th>Taxa de Adesï¿½o</th>
-					<th>atï¿½ 01/agosto</th>
-					<th style='color:red'>atï¿½ 26/setembro</th>
+					<th>Taxa de Adesão</th>
+					<th>até 01/agosto</th>
+					<th style='color:red'>até 17 de agosto</th>
 					<th>no evento</th>
 				</tr>
 				<tr>
-					<td>Acadï¿½micos</td>
-					<td>R$ 45,00</td>
+					<td>Acadêmicos</td>
 					<td>R$ 50,00</td>
-					<td>R$ 60,00</td>
-				</tr>	
+					<td>R$ 65,00</td>
+					<td>R$ 80,00</td>
+				</tr>
 				<tr>
 					<td>Profissionais</td>
-					<td>R$ 65,00</td>
-					<td>R$ 75,00</td>
-					<td>R$ 90,00</td>
-				</tr>							
-				<tr>
-					<td>ACD/THD</td>
-					<td>R$ 20,00</td>
-					<td>R$ 25,00</td>
-					<td>R$ 30,00</td>
-				</tr>											
+					<td>R$ 70,00</td>
+					<td>R$ 85,00</td>
+					<td>R$ 100,00</td>
+				</tr>
 			</table>
-				<p>*A adesï¿½o darï¿½ direito ao congressista a participar de todas as atividades cientï¿½ficas</p>
-				
-				<h2>Pagamento</h2>
-				<h3> O Pagamento da taxa de inscriï¿½ï¿½o deve ser feito atravï¿½s de depï¿½sito bancï¿½rio <br/> <br/> 
-				<b>Banco:</b>Caixa Econï¿½mica Federal <br/>
-				<b>Agï¿½ncia :</b>3181 <br/>
-				<b>Conta Corrente:</b> 61-0<br/>
-				<b>Operaï¿½ï¿½o:</b> 003
-				<br/><br/>
-				Para validar a inscriï¿½ï¿½o tire uma fotografia ou escaneie o comprovante de depï¿½sito e envie <a href='index.php?p=login'>clicando aqui</a>.
 			</div>
 		</div>
 	</div>

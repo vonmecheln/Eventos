@@ -1,4 +1,8 @@
-<? session_start(); require_once "admin/config.php" ?>
+<? session_start(); 
+
+require_once "admin/config.php";
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//PT"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
@@ -36,10 +40,8 @@ var SISTEMA_URL ="<?php echo SISTEMA_URL;?>";
 		?>
 	</div>
 		<img src="imagens/logocou.jpg"/>
-      <h1>VI Congresso de Odontologia da UNIOESTE</h1>
-		<h3>XI Jornada Acadêmica de Odontologia da Unioeste
-		<br>VI Encontro de Ex-Alunos</h3>
-      <span>29 de setembro a 2 de outubro de 2009</span> 
+      <h1><? echo EVENTO ?></h1>
+      <span>1 a 4 de setembro 2010</span> 
 	  </div>
     <!-- begin: main navigation #nav -->
     <div id="nav"> <a id="navigation" name="navigation"></a>
