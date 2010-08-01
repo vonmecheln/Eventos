@@ -36,28 +36,28 @@ class Modulo_Impressao extends Sistema_Modulo {
 		WHERE
 			c.stt_cod = 5
 		ORDER BY usr_nome ASC";
-		
+
 		$participantes = Sistema_Conecta::Execute($sql);
-		
-		$cracha = "<div id='paginaCracha'>"; 
+
+		$cracha = "<div id='paginaCracha'>";
 
 		foreach($participantes as $participante)
 		{
-			$cracha .= "<div class='cracha'>"; 
+			$cracha .= "<div class='cracha'>";
 			# se tiver nome para por no crachá
 			if($participante['tpp_cracha']){
 				$cracha .= "<b class='nome'>".ucwords(strtolower($participante['tpp_cracha']))."</b><br/>";
 			} else {
 				$abrevi = explode(" ",$participante['usr_nome']);
-				$cracha .= "<b class='nome'>".ucwords(strtolower($abrevi[0]." ".substr($abrevi[1],0,1)."."))."</b><br/>"; 
+				$cracha .= "<b class='nome'>".ucwords(strtolower($abrevi[0]." ".substr($abrevi[1],0,1)."."))."</b><br/>";
 			}
 
-			$cracha .= "<b class='nomeCompleto'>".ucwords(strtolower($participante['usr_nome']))."</b><br/><br/>"; 
-			$cracha .= "<b class='numero'>".ucwords($participante['usr_cod'])."</b>"; 
-			$cracha .= "</div>"; 
+			$cracha .= "<b class='nomeCompleto'>".ucwords(strtolower($participante['usr_nome']))."</b><br/><br/>";
+			$cracha .= "<b class='numero'>".ucwords($participante['usr_cod'])."</b>";
+			$cracha .= "</div>";
 		}
-		$cracha .= "</div>";	
-		
+		$cracha .= "</div>";
+
 		$cracha .= "
 		<style type='text/css'>
 			.paginaCracha{
@@ -89,23 +89,23 @@ class Modulo_Impressao extends Sistema_Modulo {
 				font-size: 25px;	
 			}
 		</style>";
-		
+
 		// escreve a tabela na tela
 		$this->_layout->setCorpo($cracha);
 	}
-	
+
 	/**
 	 * imprimirCertificado
-	 * 
-	 * @abstract Realiza a impressão dos certificados dos cursos 
-	 * 
+	 *
+	 * @abstract Realiza a impressão dos certificados dos cursos
+	 *
 	 * @return html
 	 */
 	public function acaoImprimircertificadocongresso()
-	{	
+	{
 		$imprimir = Sistema_Variavel::get('imprimir');
-		
-		# formulário 
+
+		# formulário
 		if(!$imprimir){
 			$html = "
 			<h1>Imprimir Certificado de Participação no Congresso</h1><br/>
@@ -116,19 +116,19 @@ class Modulo_Impressao extends Sistema_Modulo {
 				<br/>
 				<input type='submit' value='Gerar Certificado(s)'/>
 			</form>";
-			
+
 			$this->_layout->setCorpo($html);
 		} else {
 			$this->_layout->setBotoes("Imprimir","printDiv(\"layout_conteudo\",\"".SISTEMA_URL."index.php?mod=impressao&act=imprimircrachas\")","imagens/printer.png", false);
 			$this->_layout->includeJavascript(SISTEMA_URL."javascript/printdiv.js");
-	
+
 			# se passar o usuario gera apenas o certificado apenas dele senão pega o geral
 			$usr_cod = Sistema_Variavel::get('usr_cod');
-	
+
 			if($usr_cod){
 				$sqlWhere .= " AND u.usr_cod = ".$usr_cod;
 			}
-	
+
 			$sql = "
 			SELECT
 				u.usr_cod,
@@ -143,13 +143,13 @@ class Modulo_Impressao extends Sistema_Modulo {
 				c.stt_cod = 5
 				".$sqlWhere."
 			ORDER BY usr_nome ASC";
-	
+
 			$participantes = Sistema_Conecta::Execute($sql);
 
 			$htmlCertificado = modulo_impressao_funcoes::getCss();
 
 			if(is_array($participantes)){
-				foreach($participantes as $participante){				
+				foreach($participantes as $participante){
 					$htmlCertificado .= sprintf(modulo_impressao_funcoes::getCertificado('congressista'),ucwords($participante['usr_nome']));
 				}
 				$this->_layout->setCorpo($htmlCertificado);
@@ -161,16 +161,16 @@ class Modulo_Impressao extends Sistema_Modulo {
 
 	/**
 	 * acaoImpremirCertificadoTrabalhos
-	 * 
-	 * @abstract Imprime os certificados referentes aos trabalhos aceitos no eventos 
-	 * 
+	 *
+	 * @abstract Imprime os certificados referentes aos trabalhos aceitos no eventos
+	 *
 	 * @return HTML
 	 */
 	public function acaoImprimircertificadoapresentacao()
 	{
 		$imprimir = Sistema_Variavel::get('imprimir');
 
-		# formulário 
+		# formulário
 		if(!$imprimir){
 			$html = "
 			<h1>Imprimir Certificado de Apresentação de Trabalhos</h1><br/>
@@ -181,19 +181,19 @@ class Modulo_Impressao extends Sistema_Modulo {
 				<br/>
 				<input type='submit' value='Gerar Certificado(s)'/>
 			</form>";
-			
+
 			$this->_layout->setCorpo($html);
 		} else {
 			$this->_layout->setBotoes("Imprimir","printDiv(\"layout_conteudo\",\"".SISTEMA_URL."index.php?mod=impressao&act=imprimircrachas\")","imagens/printer.png", false);
 			$this->_layout->includeJavascript(SISTEMA_URL."javascript/printdiv.js");
-	
+
 			# se passar o usuario gera apenas o certificado apenas dele senão pega o geral
 			$trb_cod = Sistema_Variavel::get('trb_cod');
-	
+
 			if($trb_cod){
 				$sqlWhere .= " AND t.trb_cod = ".$trb_cod;
 			}
-	
+
 			$sql = "
 			SELECT
 				UCASE(trb_apresentador) as trb_apresentador,
@@ -210,15 +210,15 @@ class Modulo_Impressao extends Sistema_Modulo {
 			ORDER BY trb_apresentador ASC";
 
 			$trabalhos = Sistema_Conecta::Execute($sql);
-			
-			$htmlCertificado = modulo_impressao_funcoes::getCss();			
-	
-			if(is_array($trabalhos)){				
+
+			$htmlCertificado = modulo_impressao_funcoes::getCss();
+
+			if(is_array($trabalhos)){
 				foreach($trabalhos as $trabalho){
 
 					# se for painel eh painel caso contratio eh qualquer outra coisa
 					$frmApresentacao = ($trabalho['trb_frmapresentacao'] != "PAINEL") ? "APRESENTACAO ORAL" : "PAINEL";
-					 
+
 					$htmlCertificado .= sprintf(
 					modulo_impressao_funcoes::getCertificado('apresentouTrabalho'),
 					$trabalho['trb_apresentador'],
@@ -233,31 +233,31 @@ class Modulo_Impressao extends Sistema_Modulo {
 			}
 		}
 	}
-	
+
 	/**
 	 * acaoImprimircertificadoministrante
-	 * 
+	 *
 	 * @abstract imprime o certificado dos ministrantes dos trabalhos
-	 * 
+	 *
 	 * @return HTML
 	 */
 	public function acaoImprimircertificadoministrante()
 	{
-	
+
 		$this->_layout->setBotoes("Imprimir","printDiv(\"layout_conteudo\",\"".SISTEMA_URL."index.php?mod=impressao&act=imprimircrachas\")","imagens/printer.png", false);
 		$this->_layout->includeJavascript(SISTEMA_URL."javascript/printdiv.js");
-	
+
 		$sql = "
 		SELECT
 			*
 		FROM cursos";
-	
+
 		$cursos = Sistema_Conecta::Execute($sql);
-		
-		$htmlCertificado = modulo_impressao_funcoes::getCss();			
-	
+
+		$htmlCertificado = modulo_impressao_funcoes::getCss();
+
 		if(is_array($cursos)){
-			
+
 			foreach($cursos as $curso){
 
 				$autores = explode(";",$curso['crs_professor']);
@@ -285,12 +285,12 @@ class Modulo_Impressao extends Sistema_Modulo {
 	}
 
 	public function acaoImprimirCertificadoCurso()
-	{		
+	{
 		$imprimir = Sistema_Variavel::get('imprimir');
 
-		# formulário 
+		# formulário
 		if(!$imprimir){
-			
+
 			$sql = "SELECT * FROM cursos";
 			$cursos = Sistema_Conecta::Execute($sql);
 
@@ -298,7 +298,7 @@ class Modulo_Impressao extends Sistema_Modulo {
 			foreach($cursos as $curso){
 				$option .= "<option value='".$curso['crs_cod']."'>".$curso['crs_titulo']."</option>";
 			}
-			
+
 			$html = "
 			<h1>Imprimir Certificado de Participação em Cursos e Conferências</h1><br/>
 			<form method='post' action='".SISTEMA_URL."index.php?mod=impressao&act=imprimircertificadocurso'>
@@ -309,16 +309,16 @@ class Modulo_Impressao extends Sistema_Modulo {
 				<br/>
 				<input type='submit' value='Gerar Certificado(s)'/>
 			</form>";
-			
+
 			$this->_layout->setCorpo($html);
 		} else {
 			$this->_layout->setBotoes("Imprimir","printDiv(\"layout_conteudo\",\"".SISTEMA_URL."index.php?mod=impressao&act=imprimircrachas\")","imagens/printer.png", false);
 			$this->_layout->includeJavascript(SISTEMA_URL."javascript/printdiv.js");
-	
+
 			# se passar o usuario gera apenas o certificado apenas dele senão pega o geral
 			$usr_cod = Sistema_Variavel::get('usr_cod');
 			$crs_cod = Sistema_Variavel::get('crs_cod');
-	
+
 			if($usr_cod){
 				$sqlWhere .= " AND u.usr_cod = ".$usr_cod;
 			}
@@ -345,15 +345,15 @@ class Modulo_Impressao extends Sistema_Modulo {
 			ORDER BY u.usr_nome ASC";
 
 			$participantes = Sistema_Conecta::Execute($sql);
-			
-			$htmlCertificado = modulo_impressao_funcoes::getCss();			
-	
+
+			$htmlCertificado = modulo_impressao_funcoes::getCss();
+
 			if(is_array($participantes)){
 
 				foreach($participantes as $participante){
-					 				
+
 					if($participante['crs_tipo'] == "	CURSO"){
-						$titulo = " do Curso - ".$participante['crs_titulo'].", ministrado ";	
+						$titulo = " do Curso - ".$participante['crs_titulo'].", ministrado ";
 					} else {
 						$titulo = " da Conferência - ".$participante['crs_titulo'].", ministrada";
 					}
@@ -370,6 +370,96 @@ class Modulo_Impressao extends Sistema_Modulo {
 				$this->_msg->setErro("Nenhum certificado foi localizado.");
 			}
 		}
+	}
+
+	public function acaoImprimeBoleto(){
+
+		$nosso_numero = Sistema_Variavel::get('nosso_numero');
+
+		$sql = "SELECT bol_cod FROM boleto WHERE bol_nossonumero = '$nosso_numero' ";
+
+		$con = Sistema_Conecta::getConexao();
+		$bol_cod = $con->getOne($sql);
+		
+		echo("<pre>");print_r($bol_cod);echo("</pre>");die();
+
+		if($bol_cod){
+				
+			$boleto = new Classe_Boleto($bol_cod);
+
+			// DADOS DO BOLETO PARA O SEU CLIENTE
+			$dias_de_prazo_para_pagamento = 5;
+			$taxa_boleto = 2.95;
+			$bol_datavencimento = $boleto->getbol_datavencimento();
+			die($bol_datavencimento);
+			$data_venc = date("d/m/Y", time() + ($dias_de_prazo_para_pagamento * 86400));  // Prazo de X dias  OU  informe data: "13/04/2006"  OU  informe "" se Contra Apresentacao;
+			$valor_cobrado = "2950,00"; // Valor - REGRA: Sem pontos na milhar e tanto faz com "." ou "," ou com 1 ou 2 ou sem casa decimal
+			$valor_cobrado = str_replace(",", ".",$valor_cobrado);
+			$valor_boleto=number_format($valor_cobrado+$taxa_boleto, 2, ',', '');
+
+			$dadosboleto["inicio_nosso_numero"] = "80";  // Carteira SR: 80, 81 ou 82  -  Carteira CR: 90 (Confirmar com gerente qual usar)
+			$dadosboleto["nosso_numero"] = "19525086";  // Nosso numero sem o DV - REGRA: Máximo de 8 caracteres!
+			$dadosboleto["numero_documento"] = "27.030195.10";	// Num do pedido ou do documento
+			$dadosboleto["data_vencimento"] = $data_venc; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
+			$dadosboleto["data_documento"] = date("d/m/Y"); // Data de emissão do Boleto
+			$dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do boleto (opcional)
+			$dadosboleto["valor_boleto"] = $valor_boleto; 	// Valor do Boleto - REGRA: Com vírgula e sempre com duas casas depois da virgula
+
+			// DADOS DO SEU CLIENTE
+			$dadosboleto["sacado"] = "Nome do seu Cliente";
+			$dadosboleto["endereco1"] = "Endereço do seu Cliente";
+			$dadosboleto["endereco2"] = "Cidade - Estado -  CEP: 00000-000";
+
+			// INFORMACOES PARA O CLIENTE
+			$dadosboleto["demonstrativo1"] = "Pagamento de Compra na Loja Nonononono";
+			$dadosboleto["demonstrativo2"] = "Mensalidade referente a nonon nonooon nononon<br>Taxa bancária - R$ ".number_format($taxa_boleto, 2, ',', '');
+			$dadosboleto["demonstrativo3"] = "BoletoPhp - http://www.boletophp.com.br";
+
+			// INSTRUÇÕES PARA O CAIXA
+			$dadosboleto["instrucoes1"] = "- Sr. Caixa, cobrar multa de 2% após o vencimento";
+			$dadosboleto["instrucoes2"] = "- Receber até 10 dias após o vencimento";
+			$dadosboleto["instrucoes3"] = "- Em caso de dúvidas entre em contato conosco: xxxx@xxxx.com.br";
+			$dadosboleto["instrucoes4"] = "&nbsp; Emitido pelo sistema Projeto BoletoPhp - www.boletophp.com.br";
+
+			// DADOS OPCIONAIS DE ACORDO COM O BANCO OU CLIENTE
+			$dadosboleto["quantidade"] = "";
+			$dadosboleto["valor_unitario"] = "";
+			$dadosboleto["aceite"] = "";
+			$dadosboleto["especie"] = "R$";
+			$dadosboleto["especie_doc"] = "";
+
+
+			// ---------------------- DADOS FIXOS DE CONFIGURAÇÃO DO SEU BOLETO --------------- //
+
+
+			// DADOS DA SUA CONTA - CEF
+			$dadosboleto["agencia"] = "1565"; // Num da agencia, sem digito
+			$dadosboleto["conta"] = "13877"; 	// Num da conta, sem digito
+			$dadosboleto["conta_dv"] = "4"; 	// Digito do Num da conta
+
+			// DADOS PERSONALIZADOS - CEF
+			$dadosboleto["conta_cedente"] = "87000000414"; // ContaCedente do Cliente, sem digito (Somente Números)
+			$dadosboleto["conta_cedente_dv"] = "3"; // Digito da ContaCedente do Cliente
+			$dadosboleto["carteira"] = "SR";  // Código da Carteira: pode ser SR (Sem Registro) ou CR (Com Registro) - (Confirmar com gerente qual usar)
+
+			// SEUS DADOS
+			$dadosboleto["identificacao"] = "BoletoPhp - Código Aberto de Sistema de Boletos";
+			$dadosboleto["cpf_cnpj"] = "";
+			$dadosboleto["endereco"] = "Coloque o endereço da sua empresa aqui";
+			$dadosboleto["cidade_uf"] = "Cidade / Estado";
+			$dadosboleto["cedente"] = "Coloque a Razão Social da sua empresa aqui";
+
+			// NÃO ALTERAR!
+			include("impressao/include/funcoes_cef.php");
+			include("impressao/include/layout_cef.php");
+
+		} else {
+			echo("<pre>");print_r('Boleto não encontrado!');echo("</pre>");
+		}
+
+		die();
+
+
 	}
 }
 ?>
