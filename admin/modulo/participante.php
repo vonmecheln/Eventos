@@ -12,24 +12,6 @@ class Modulo_Participante extends Sistema_Modulo{
 
 	protected $_modulo = "participante";
 
-	/**
-	 * @abstract Ação que monta o formulário de cadastro/alteração
-	 * dos usuários do sistema
-	 * @return String
-	 */
-	public function acaoFormParticipante(){
-
-		$objeto = new Classe_Participante(Sistema_Variavel::get('usr_cod'));
-		$form = new Componente_Formulario($objeto);
-
-		$this->_layout->setNomePagina("Cadastrar Participante");
-		
-		# Cria o botão para listar usuários
-		$this->_layout->setBotoes("Listar Participantes",Sistema_Util::getURL($this->_modulo,"listarparticipantes"),"imagens/list.png");
-		$this->_layout->setCorpo($form->getForm($this->_modulo,"salvarparticipante"));
-		
-	}
-	
 	public function acaoListarParticipante(){
 
 		$lista = new Componente_Listagem('lista_participante');
@@ -41,12 +23,12 @@ class Modulo_Participante extends Sistema_Modulo{
 			s.stt_nome
 		FROM 
 			usuario u
-		INNER JOIN participante p ON 
+		INNER JOIN participante p ON
 			p.usr_cod = u.usr_cod
 		LEFT JOIN comprovante c ON 
 			c.usr_cod = u.usr_cod
 		LEFT JOIN status s ON 
-			s.stt_cod = c.stt_cod
+			s.stt_cod = u.stt_cod
 		";
 		$lista->setSQL($sql);
 
@@ -61,12 +43,10 @@ class Modulo_Participante extends Sistema_Modulo{
 		$lista->setWhere(" u.grp_cod != ".DESENVOLVEDOR." AND u.stt_cod != 2");
 
 		$lista->setNomeParametro("usr_cod");
-		$lista->setBotaoModuloAcao("Alterar",$this->_modulo,"formusuario",Componente_Listagem::$_IMG_ALTERAR);
-		$lista->setBotaoModuloAcao("Comprovante",$this->_modulo,"comprovante","imagens/comprovante.png");
-
+		$lista->setBotaoModuloAcao("Alterar",'usuarios',"formusuario",Componente_Listagem::$_IMG_ALTERAR);
 		
 		# Cria o botão para novo usuário
-		$this->_layout->setBotoes("Novo Usuário",Sistema_Util::getURL("usuarios","formusuario"),"imagens/form.png");
+		$this->_layout->setBotoes("Novo Usuário/Participante",Sistema_Util::getURL("usuarios","formusuario"),"imagens/form.png");
 		$this->_layout->setNomePagina("Listagem de Usuários");
 		$this->_layout->setCorpo($lista->getForm());
 	}
