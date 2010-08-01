@@ -117,7 +117,7 @@ class Sistema_Login{
 			$usr->setDados(array("usr_cod"=>$usr_cod,"usr_senha"=>$nova));
 			if($usr->salvar()){
 			
-			$subject = 'COU - CONTATO - RECUPERAÇÃO DE SENHA';
+			$subject = EVENTO . 'RECUPERAÇÃO DE SENHA';
 			$mensagem = "<b>E-mail:</b> ".$email."<br/>";
 			$mensagem .= "<b>Nova Senha:</b> ".$nova."<br/>";
 			$mensagem .= "Acesse <a href='".SISTEMA_URL."index.php?p=login'> LOGIN </a> e altere sua senha<br/>";
@@ -125,7 +125,7 @@ class Sistema_Login{
 
 			/* Configuração do PHP MAILER -----------------------------*/
 			$emailCou = EMAIL."@yahoo.com.br";
-			$nomeCou = "COU - UNIOESTE";
+			$nomeCou = EVENTO;
 
 			require "phpmailer/class.phpmailer.php";
 			$mail = new PHPMailer();
@@ -186,8 +186,11 @@ class Sistema_Login{
 							usuario.usr_senha,
 							usuario.stt_cod,
 							grupo.grp_cod,
-							grupo.grp_nome
+							grupo.grp_nome,
+							tpp_cod
 						FROM usuario 
+						  LEFT JOIN participante p ON
+                p.usr_cod = usuario.usr_cod
 						INNER JOIN grupo ON grupo.grp_cod = usuario.grp_cod
 						WHERE 
 							usuario.usr_login='%s' 
@@ -205,6 +208,7 @@ class Sistema_Login{
 			$_SESSION['login']['grupo_cod']	 = $rs[0]['grp_cod'];
 			$_SESSION['login']['grupo'] 	 = $rs[0]['grp_nome'];
 			$_SESSION['login']['status'] 	 = $rs[0]['stt_cod'];
+			$_SESSION['login']['tpp_cod'] 	 = $rs[0]['tpp_cod'];
 
 			# Carrega as permissões
 			$this->carregaPermissoes();

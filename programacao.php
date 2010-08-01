@@ -1,4 +1,3 @@
-
 <style type="text/css">
 <!--
 .style1 {color: #00A650}
@@ -6,367 +5,452 @@
 </style>
 <div class="subcolumns">
   <div class="c62l2">
-  	<h1><a name="social" id="terca"></a>PROGRAMA&Ccedil;&Atilde;O SOCIAL </h1>		
-  	<h2><span class="style1">30/09/09 Quarta-Feira</span></h2>
-  	<h3>18:30hr - Happy Hour </h3>
-  	<h2><span class="style1">01/10/09 Quinta-Feira</span></h2>
-  	<h3>18:30hr - Happy Hour </h3>
-  	<h2><span class="style1">02/10/09 Sexta-Feira</span></h2>
-  	<h3>21hr - Coquetel de encerramento e Premia&ccedil;&atilde;o dos melhores trabalhos. </h3>
-  	<p>&nbsp;</p>
-  	<h1>PROGRAMAÇÃO CIENTÍFICA</h1>
-  	<h2 class="style1"><a name="terca" id="terca"></a>28/09/09 Ter&ccedil;a-Feira</h2>
-  	<p>
-  	<h3>8hr - 12hr / 14hr - 18hr - Apresenta&ccedil;&atilde;o de Trabalhos </h3>
-  	</p>
-	
-  	<h2 class="style1" style="border-top:1px solid #CCC;margin-top:25px;padding-top:15px;"><a name="quarta" id="quarta"></a>30/09/09 Quarta-Feira</h2>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Quarta-Feira
+- 01/09/2010</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:00-18:00
+Segundo dia de prevenção de doenças cardiovasculares (LACCOP)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">19:30
+- 20:00  Credenciamento</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">20:00
+- 20:30 Abertura </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">20:30
+- 21:30 Palestra de abertura: </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Jorge
+Timi (HC-UFPR Curitiba)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">21:30
+ Coquetel</FONT></FONT></P>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Quinta
+- Feira - 02/09/2010</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Manhã:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:00-08:30
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+Biologia molecular na prática clínica (mini A)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Manoel
+Leite (Cascavel)</B></FONT></FONT></P>
 
-	<h3>&nbsp;</h3>
-	<h3>8h - 8h40 - Café da manhã e entrega de material</h3>
-	<p>&nbsp;</p>
-	<h3>8h45 - 9h15 - Abertura Solene</h3>
-	<p>&nbsp;</p>
-	<h3>9h30 - 12h - Fixação dos painéis</h3>
-	<p>&nbsp;</p>
-	<h3>9h30-12h30 – Curso 1 – Odontologia: uma profissão de sucesso?</h3>
-	<p><b>A ODONTOLOGIA COMO PROFISSÃO ATUAL.  ODONTOLOGIA X ÉTICA. A ODONTOLOGIA DO TRABALHO, UMA NOVA ESPECIALIDADE.</b><br />
-	Prof. Dr. Wellington Zaitter (Universidade Positivo - Curitiba / PR) </p>
-	<div>
-	<img src="palestrantes/img1.jpg" width="150" height="202" align="left" style="padding:25px;" />
-<br /><br /><p>		<br />
-  Prof. Dr. Wellington Zaitter</p>
-<br />
-   <ul>
-	   <li>
-	     <div align="left">	       Especialista, mestre e doutor em odontologia legal e Deontologia-USP-SP</div>
-	   </li>
-	   <li>
-	     <div align="left">Professor da Universidade Positivo</div>
-	   </li>
-	   <li>
-	     <div align="left"> Professor da pós-graduação da Up, UFPr , ABO e Unioeste, </div>
-	   </li>
-	   <li>
-	     <div align="left">
-	       <div align="left">Coordenador do Curso de especializa&ccedil;&atilde;o em Odontologia Legal e do trabalho-ABO-Pr e Up(Universidade Positivo) </div>
-	     </div>
-	   </li>
-    </ul>
-</div><br/>
-<br/><br/>
-<h3 align="left">9:30h &ndash; 12:30h &ndash; Curso 2 - Ortodontia</h3>
-<b>ORTODONTIA INFANTIL: RECONHECENDO PROBLEMAS E PROPONDO SOLU&Ccedil;&Otilde;ES</b><br />
-<img src="palestrantes/img4.jpg" width="146" height="205" align="left" style="padding:25px" />
-<p align="justify"> <br />
-    <br />
-  Prof. Dr. Marcos Rog&eacute;rio de Mendon&ccedil;a </p>
-<ul>
-  <li>
-    <div align="left"> Mestre e Doutor em Ortodontia pela F.O.Piracicaba-UNICAMP</div>
-  </li>
-  <li>
-    <div align="left"> Professor da Disciplina de Ortodontia da Faculdade de Odontologia de Ara&ccedil;atuba - UNESP</div>
-  </li>
-  <li>
-    <div align="left"> Professor do Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Odontologia da F.O.Ara&ccedil;atuba-UNESP. </div>
-  </li>
-</ul>
-<br />
-<br />
-<br />
-<br />
-<br/><br/><br /><br />
-	 <h3>14h – 17h - Curso 3 – Marketing </h3>
-	 <p><b>Como não perder e assim ganhar cliente?</b><br />
-	</p>
-	<div>
-	<img src="palestrantes/img2.jpg" align="left" style="padding:25px;" />
-	<br /><br />
-	<p align="justify">
-	Prof. Antonio Inácio Ribeiro</p>
-	<ul>
-	  <li>
-	    <div align="left">	      Doutorando em Marketing pela Universidade La Rioja – Espanha</div>
-	  </li>
-      <li>
-        <div align="left"> Mestre Executivo em Administração de Negócios pelo Instituto Superior de Administração e Economia da Fundação Getúlio Vargas – PR</div>
-      </li>
-	  <li>
-	    <div align="left"> Especialista em Marketing pela PUC – PR</div>
-	  </li>
-	  <li>
-	    <div align="left"> Habilitado ao Ensino no Magistério Superior pela PUC-PR</div>
-	  </li>
-	  <li>
-	    <div align="left"> Pós-graduado em Marketing pela ADVB - Associação dos Dirigentes de Vendas e Marketing do Brasil – SP</div>
-	  </li>
-	  <li>
-	    <div align="left"> Administrador de Empresas pela Universidade Mackenzie – SP</div>
-	  </li>
-	  <li>
-	    <div align="left"> Diretor da Odontex Ltda. e New – Odontex Industrial  Implantológica Ltda. </div>
-      </li>
-	</ul>
-	</div>
-	<p><br />
-      </p>
-	<h3>14h30 &ndash; 15h30 &ndash; Confer&ecirc;ncia 1</h3>
-	<b>OBTURA&Ccedil;&Atilde;O DOS CANAIS SEM CONES &ndash; REALIDADE COMPROVADA</b><br />
-    <p align="justify"> Prof. Eduardo Tanaka de Castro</p>
-    <ul>
-      <li>
-        <div align="left"> Professor da Disciplina e P&oacute;s-Gradua&ccedil;&atilde;o de Endodontia da Unioeste &ndash; Cascavel &ndash;PR</div>
-      </li>
-      <li>
-        <div align="left"> Mestre em Endodontia FOB-USP </div>
-      </li>
-    </ul>
-    <p><br />
-	  <br />
-	  <br />
-    </p>
-	<h3>16h – 17h – Conferência 2 </h3>  
-	<b>TABAGISMO: INFLU&Ecirc;NCIA NA SA&Uacute;DE GERAL E PERIODONTAL</b>
-	<p align="justify">
-	Prof. Cássio Franco</p>
-	<ul>
-	  <li>
-	    <div align="left"> Especialista em Pneumologia (Hospital do Servidor Públic Municipal de São Paulo)</div>
-	  </li>
-      <li>
-        <div align="left"> Prof. do Curso de Medicina da UNIOEST/Cascavel</div>
-      </li>
-	  <li>
-	    <div align="left"> Coordenador de Medicina Preventiva da UNIMED</div>
-	  </li>
-	  <li>
-	    <div align="left"> Responsável pelo Projeto Anti-tabagismo da UNIMED</div>
-	  </li>
-    </ul>
-	  Profa. Lucinara Ignez Tavares Luzzi
-	  <ul>
-	  <li>
-	    <div align="left"> Mestre em Periodontia (FOB/USP)</div>
-	  </li>
-	  <li>
-	    <div align="left"> Especialista em Periodontia (AONP/Londrina)</div>
-	  </li>
-	  <li>
-	    <div align="left"> Profª. do Curso de Odontologia da UNIOESTE/Cascavel</div>
-	  </li>
-	  <li>
-	    <div align="left"> Profª. do Curso de Periodontia da ABO/Cascavel </div>
-      </li>
-	</ul>
-	<h2 class="style1" style="border-top:1px solid #CCC;margin-top:25px;padding-top:15px;"><a name="quinta" id="quinta"></a>201/10/09 Quinta-Feira</h2>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Fabiano
+Sandrini (Lab Álvaro)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">                     
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Diagnóstica
+precoce em oncopediatria (mini B)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Reginaldo
+Jose Andrade (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Carmem
+Fiori (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
 
-	<h3>&nbsp;</h3>
-	<h3>8h30 - Abertura da secretaria</h3>
-	<p>&nbsp;</p>
-	<h3>9h - 12h - Apresentação de trabalhos</h3>
-	<p>&nbsp;</p>
-	<h3>9h – 12h – Curso 4 – INTERNACIONAL -  Endodontia</h3>
-	<b>PASSADO, PRESENTE E FUTURO DO NITI NA ENDODONTIA</b><br />
-	<br />
-	<div>
-	<img src="palestrantes/img3.jpg" width="146" height="205" align="left" style="padding:25px"/><br />
-	 <p align="justify">
-	<br />Profa. Catalina Mendez de La Espriella</p>
-	 <ul>
-	   <li>
-	     <div align="left">	       Odontóloga Colegio Odontológico Colombiano</div>
-	   </li>
-	   <li>
-	     <div align="left"> Especialista en Endodoncia Pontificia Universidad Javeriana</div>
-	   </li>
-	   <li>
-	     <div align="left"> Docente Postgrado Pontificia Universidad Javeriana</div>
-	   </li>
-	   <li>
-	     <div align="left"> Docente del
-	       Diplomado Fundamentos en Endodoncia</div>
-	   </li>
-	   <li>
-	     <div align="left"> Autora de publicaciones nacionales e internacionales. </div>
-       </li>
-	</ul>
-	</div><br /><Br /><Br /><Br /><br /><br />
-	
-	     <h3 align="left"><br />
-	       14h &ndash; 18h &ndash; APRESENTA&Ccedil;&Atilde;O DE TRABALHO <br />
-	       <br />
-	       <br />
-	       <Br />
-	       <br />
-	     </h3>
-    
-    
-	 <h3 align="left">14h30 – 16h30 – Curso 5 – PRATA DA CASA</h3>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:30-09:00
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Importância
+Clínica da Vitamina D (mini A)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcos
+Quirino (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Álvaro
+Largura (Lab Álvaro)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">                      
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Febre
+sem sinais localizatórios em pediatria (mini B)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
 
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcos
+Antonio da Silva Cristovam (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Conferencista:</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US"><B>Tony
+Tannous Tahan (HC-UFPR Curitiba)</B></SPAN></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">09:00-09:30
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Doença
+Celíaca em adultos (mini A)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Álvaro
+Largura (Lab Álvaro)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Mauro
+Bonatto (Unioeste Cascavel)</B></FONT></FONT></P>
 
-	 <b>COMPLICAÇÕES EM CIRURGIA BUCAL: PREVENÇÃO E TRATAMENTO. 
-	<br />Avaliação pré-operatória das características clínicas que podem sugerir possíveis complicações cirúrgicas
-	</b><br />
-	<img src="palestrantes/img5.jpg" width="146" height="205" align="left" style="padding:25px"/>
-	 <p align="justify">
-	<br /><br />Prof. Dr. Greison Rabelo de Oliveira </p	>
-	 <ul>
-	   <li>
-	     <div align="left">	       Ms. e Dr. em Cirurgia e Traumatologia Bucomaxilofacial pela FOP – Unicamp,</div>
-	   </li>
-       <li>
-         <div align="left">Prof. da Graduação e  Residência em Cirurgia e Traumatologia Buco-Maxilo-Facial da Universidade Estadual do Oeste do Paraná – UNIOESTE </div>
-       </li>
-    </ul>
-<br /><br /><br /><br /><br /><br />
-<h3>15h &ndash; 16h &ndash; Confer&ecirc;ncia 3 </h3>
-<b>PROJETO RONDON: CONTRIBUI&Ccedil;&Atilde;O DA ODONTOLOGIA E EXPERI&Ecirc;NCIAS VIVENCIADAS</b><br />
-<p align="justify"> Profa. Adriane de Castro Martinez Martins</p>
-<ul>
-  <li>
-    <div align="left"> Mestre em Ci&ecirc;ncias da Sa&uacute;de</div>
-  </li>
-  <li>
-    <div align="left"> Professora de Odontologia em Sa&uacute;de Coletiva e Estomatologia &ndash; UNIOESTE </div>
-  </li>
-</ul>
-<div align="left">Monica Zeni Refosco, Thiago Vin&iacute;cius S. Slaviero, Cassiano Elisson Pereira Pinto - Acad&ecirc;micos &ldquo;Rondonistas&rdquo; - 5&ordm; ano UNIOESTE </div>
-<br /><br />
-	 <h2 class="style1" style="border-top:1px solid #CCC;margin-top:25px;padding-top:15px;"><a name="sexta" id="sexta"></a>02/10/09 Sexta-Feira</h2>	
-	
-	 <h3>&nbsp;</h3>
-	<h3>8h30 - Abertura da secretaria</h3>
-	<p>&nbsp;</p>
-	<h3>9h – 12h – Curso 6 – Dentística/Workshop </h3>
-	<p><b>CLAREAMENTO E ESTRATIFICAÇÃO COM RESINA COMPOSTA NA BUSCA DA EXCELÊNCIA </b><br />
-	  <b>Workshop: RESTAURAÇÃO POLICROMÁTICA DE CLASSE IV</b><br />
-    </p>
-	<img src="palestrantes/img6.jpg" width="150" height="202" align="left" style="padding:25px"/>
-	<p align="justify">
-	<br />
-	<br />
-	<br />
-	Prof. Dr. Alessandro D. Loguercio</p	>
-	 <ul>
-	   <li>
-	     <div align="left">	       Especialista e Mestre em Dentística (FO-UFPEL)</div>
-	   </li>
-       <li>
-         <div align="left"> Doutor em Materiais Dentários (FO-USP)</div>
-       </li>
-       <li>
-         <div align="left"> Professor de Dentística e Materiais UNOESC/Joaçaba/SC e Dentística , UEPG/Ponta Grossa/PR</div>
-       </li>
-       <li>
-         <div align="left"> Autor do Livro: Materiais Dentários Diretos: dos fundamentos a aplicação clínica </div>
-       </li>
-    </ul>
-<br /><br /><br /><br />
-<br />
-<br />
-	 <h3>9h – 12H - Avaliação dos painés</h3>
-	 <p>&nbsp;</p>
-	 <h3>9h – 12h/14h – 17h – Curso 7 – ACDs e THDs (ASB e TSB*) Saúde Coletiva</h3>
-	 <b>Acolhimento e Qualidade da Atenção em Saúde; Papel das ASBs e TSBs na Vigilância Sanitária/Epidemiológica e Bases para sua 
-	Atuação em Saúde Bucal; Vigilância em Saúde. </b><br />
-	 <p align="justify">
-    Profa. Dra. Marina Berti </p	>
-	 <ul>
-	   <li>
-	     <div align="left">	       Mestre e Doutora em Odontologia em Saúde Coletiva FOA UNESP</div>
-	   </li>
-       <li>
-         <div align="left"> Especialista em Odontopediatria EAP/ABO Ponta Grossa PR</div>
-       </li>
-    </ul>
-	 <p align="justify">  Profa. Mariângela Monteiro de Melo Baltazar</p>
-	   <ul>
-	   
-	   
-       <li>
-	   
-         <div align="left"> Profa. de Saúde Coletiva Unioeste - Cascavel<Br>
-           
-           Docente de Odontologia em Saúde Coletiva – Unioeste - Cascavel</div>
-       </li>
-       <li>
-         <div align="left"> Especialista e Doutoranda em Odontologia em Saúde Coletiva</div>
-       </li>
-       <li>
-         <div align="left"> Mestre em Saúde Coletiva.
-           (* Auxiliar e Técnicos em Saúde Bucal) </div>
-       </li>
-    </ul>
-	 <p align="justify">&nbsp;</p	>
-	 <h3>14h – 17h – Curso 8 – Cariologia </h3>
-	<b>CARIOLOGIA X FLUORETOS</b><br />
-	 <p align="justify">
-	<img src="palestrantes/img7.jpg" width="150" height="202" align="left" style="padding:25px"/></p	>
-	 <p align="justify"><br />
-       <br />
-     Prof. Dr. Jaime A. Cury</p	>
-	 <ul>
-	   <li>
-	     <div align="left">	       Mestre e Doutor em Bioquímica - UFPR, USP</div>
-	   </li>
-       <li>
-         <div align="left"> Pós-doutorado em Cariologia - UR-USA</div>
-       </li>
-       <li>
-         <div align="left"> Presidente da ABOPREV</div>
-       </li>
-       <li>
-         <div align="left"> Presidente do Grupo de Cariologia da IADR</div>
-       </li>
-       <li>
-         <div align="left"> Professor Titular de Bioquímica - FOP-UNICAMP. </div>
-       </li>
-    </ul>
-<br /><Br /><Br /><Br />
-<br />
-<Br /><br /><br />
-<img src="palestrantes/img8.jpg" width="150" height="202" align="left" style="padding:25px"/>
-	 <p align="justify"><br />
-	   <br />
-	   <br />
-     Profa. Dra. Lívia M.A. Tenuta</p	>
-	 <ul>
-	   <li>
-	     <div align="left">	       Mestre em Odontopediatria, FOB-USP</div>
-	   </li>
-       <li>
-         <div align="left">Doutora em Cariologia, FOP-UNICAMP</div>
-       </li>
-       <li>
-         <div align="left"> Pós-doutorado em Cariologia,
-           FOP-UNICAMP
-           <div align="left"></div>
-         </div>
-       </li>
-       <li>
-         <div align="left"> Profa. Assistente Doutora de Bioquímica, FOP-UNICAMP. </div>
-       </li>
-    </ul>
-	 <h3>&nbsp;</h3>
-	 <h3>&nbsp;</h3>
-	 <h3><br />
-	   <br />
-     15h30 – 16h30 – Conferência 4</h3>
-	 <b>Revisão de Literatura Comparativa entre Sistemas de Implantes com Conexão Pilar Protético Tipo Cone (retidos por fricção) e Conexão Pilar Tipo Cone (retido por aparafusamento)</b><br>
-<p align="justify">
-	Prof. Adriano Picolotto</p	>
-<ul>
-  <li>
-    <div align="left">      Especialista em Prótese Dentária</div>
-  </li>
-  <li>
-    <div align="left"> Professor da Disciplina de Oclusão - Unioeste/Cascavel</div>
-  </li>
-  <li>
-    <div align="left"> Consultor Científico - Kopp Implantes. </div>
-  </li>
-</ul>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">                       
+ <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Puericultura
+do séc XXI (mini B)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Milton
+Elias de Oliveira (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcos
+Antonio da Silva Cristovam (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">09:30-10:00
+Cofee Break </FONT></FONT>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:00-10:30
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Fisiopatogenia e tratamento da sepsi  </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Amauri
+César Jorge (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Péricles
+Duarte (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> 
+
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:30-12:00
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Mecanismo do trauma </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=1>
+</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Rodrigo
+Rodrigues (Unioeste Cascavel) </B></FONT></FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:</FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Vitor
+de Souza (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">13:30-15:00
+</FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mesa
+Redonda</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Medicina esportiva (mini-auditório A) </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Carlos
+Tadashi Kunioka (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">13:30-14:30
+Conferência: Dermatologia na atenção básica (mini-auditório B)  </FONT></FONT>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Roseli
+Terezinha Ruaro (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">14:30-15:00
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Diagnóstico
+Diferencial de doença reumática</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">(mini
+B)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Manoel
+Leite (Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Márcio
+Nogueria (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:00-15:30
+Cofee Break</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:30-16:30
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Cefaléia:
+o que fazer quando tudo falha</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Paulo
+Carrilho (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcelo
+Calderaro (São Paulo)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">16:30-18:00
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mesa
+Redonda</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Geriatria </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcos
+Quirino (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+
+Cascavel</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Apresentações
+orais</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">13:30-15:00
+Mini auditório C: 4 temas</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:00-15:30
+intervalo</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:30-17:00
+Mini auditório C: 4 temas</FONT></FONT></P>
+
+<BR>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Noite:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">18:30
+- 20:30 Mini-cursos :</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm">       <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">ATLS
+- Atendimento inicial ao politraumatizado;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">       <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Procedimento
+básicos durante o Pré-natal;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">       <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Interpretação
+e análise de exames laboratoriais</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Sexta-Feira
+03/09/10</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Manhã</B></FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:00-09:30
+Mesa Redonda: Apoio psicopedagógico ao estudante de medicina.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Orival
+Alves (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcelo
+Cano (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Cascavel), </B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marly
+Alves Daólio (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">09:30-10:00
+Cofee Break</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:00-10:30
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:
+</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Diagnóstico
+Precoce das doenças do pâncreas  </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Marcos
+Perini (USP São Paulo)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:30-12:00
+ </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mesa
+Redonda</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+A interação entre o médico e o laboratório </FONT></FONT>
+
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Álvaro Largura (Lab Álvaro Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Fabiano
+Sandrini (Lab Álvaro Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Alisson
+Marassi (Lab Álvaro Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Luciano
+G. de Carvalho (Lab Álvaro Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Tarde:</B></FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">13:30
+- 14:30 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência:</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+Doenças Tropicais e a medicina do viajante (mini A)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>José
+Fernando Carvalho Martins (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Carla
+Sakuma de Oliveira Bredt (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">                       
+ <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Colóquio:
+
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Perguntas
+práticas/Respostas objetivas - HAS e DM.</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Moderador:</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>
+</I></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Gerson
+Luiz Bredt Junior (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Respondedores:
+</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Leonidas
+Tondo (Unioeste Cascavel), Marcela Jorge (Unioeste Cascavel), Luciana
+Oliveira (Unioeste Cascavel) e Roberta Marques </B></FONT></FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">14:30
+- 15:00 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Hospitais de ensino e pesquisa médica (mini-auditório B) </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Luis
+Alberto Batista Peres (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Rui
+Manuel de Sousa Sequeira Antunes de Almeida (Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">                       
+ <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Como abordar um paciente crítico (mini-auditório A) </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Mauro
+Bonatto (Unioeste Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Luis
+de Castro Bastos (Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:00
+-15:30 Coffe-Break</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:30-16:30
+ </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Ponto
+e contra ponto</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Emergências Clínicas x Emergências Cirúrgicas</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:
+</FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Péricles
+Duarte (</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Unioeste</B></FONT></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+Cascavel) e Marcos Perini (USP-São Paulo)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">16:30
+- 18:00 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mesa
+Redonda</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+A morte sob a ótica médica. -</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm">             <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-como
+lidar como a morte (família, paciente);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">            <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-cuidados
+paliativos no paciente terminal;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">           
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-eutanásia/distanásia
+(questões éticas);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> 
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Apresentações
+orais</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">13:30-15:00
+Mini auditório C: 4 temas</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:00-15:30
+intervalo</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">15:30-17:00
+Mini auditório C: 4 temas</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Noite:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">18:30
+- 20:30 Mini-Cursos :</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">            
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Atendimento
+ao paciente queimado.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">            
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Atendimento
+inicial ao paciente envenenado (acidentes ofídicos e intoxicações
+medicamentosas) - CEATOX.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">           
+
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Interpretação
+de ECG.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Sábado
+- 04/09/2010</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Manhã:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:00
+- 08:30 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:Programa
+de redução de danos </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:
+</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Eliane
+Giacomelli (Cedip-Cascavel)</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">08:30
+- 09:30 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Ponto
+e contra ponto:</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+Síndromes metabólicas (Obedisdade e DM) - Visão do Clínico X
+Visão do Cirurgião</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"> <FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Allan
+César Faria Araújo (Unioeste-Cascavel) e Fabiano Sandrini (Lab
+Álvaro Cascavel)</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">09:30
+- 10:00 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Conferência</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Estratégias no tratamento da dor </FONT></FONT>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Presidente:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Conferencista:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:00
+- 10:30 cofee break</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">10:30
+- 12:00 </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>Mesa
+Redonda</I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">:
+Nutrição e Saúde. </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Ademar
+Dantas da Cunha Junior (Unioeste -Cascavel), Rene Azzolini
+(Cascavel), Cláudia Felicetti (Cascavel) Márcia de Fátima Sakr
+(Unioeste Cascavel)</B></FONT></FONT></FONT></P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm">              <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>-
+</B></I></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">nutrição
+no </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>pré
+e pós-operatório;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">              <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-nutrição
+e co-morbidades;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">            
+<FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-distúrbios
+alimentares;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm">            <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>-
+desnutrição - aparente e inaparente.</I></FONT></FONT></P>
+  
+  </div>
 </div>
 
 </div>

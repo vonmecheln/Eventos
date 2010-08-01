@@ -119,9 +119,6 @@
                 <div class="info">
 		            <?php include'menuTrabalhos.php'; ?>
 		        </div>      
-				<div class="info">
-					<?php include'./downloads.php'; ?>
-				</div>
 			</div>
 		</div>
 	</div>

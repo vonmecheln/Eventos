@@ -13,13 +13,13 @@ foreach($campos as $k=>$v){
 }
 
 // Tipo do paticipante
+$vetTpPart = array("Acadêmico"=>"Acadêmico","Profissional"=>"Profissional");
+$select = selectArray::getHtmlSelect($vetTpPart,'tpp_nome',$rs['tpp_nome']);
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_nome">Sou</label>
-							<select name="tpp_nome" id="tpp_nome" onChange="insc.tipoParticipante(this.value)">
-								<option value="Acadêmico">Acadêmico</option>
-								<option value="Profissional">Profissional</option>
-							</select>
-						</div>');
+							%s
+						</div>',$select);
+						
 $campos_form .= sprintf('<div class="type-text">
 							<label for="tpp_desc" id="nome_desc">Universidade</label>
 							<input type="text" name="tpp_desc" id="tpp_desc" value=""/>
@@ -34,19 +34,19 @@ $vetTpPart = array(""=>"Não Enviarei","Tema Livre"=>"Tema Livre + R$ 30,00","Pos
 
 $select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho1',$rs['tpp_trabalho1']);
 $campos_form .= sprintf('<div class="type-text">
-							<label for="tpp_nome">Sou</label>
+							<label for="tpp_nome">Trabalho 1</label>
 							%s
 						</div>',$select);
 
 $select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho2',$rs['tpp_trabalho2']);
 $campos_form .= sprintf('<div class="type-text">
-							<label for="tpp_nome">Sou</label>
+							<label for="tpp_nome">Trabalho 2</label>
 							%s
 						</div>',$select);
 
 $select = selectArray::getHtmlSelect($vetTpPart,'tpp_trabalho3',$rs['tpp_trabalho3']);
 $campos_form .= sprintf('<div class="type-text">
-							<label for="tpp_nome">Sou</label>
+							<label for="tpp_nome">Trabalho 3</label>
 							%s
 						</div>',$select);
 

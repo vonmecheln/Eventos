@@ -7,7 +7,7 @@ require_once "admin/config.php";
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
 <head>
-<title>COU - Congresso de Odontologia da UNIOESTE</title>
+<title>V SIMPÓSIO MÉDICO - A construção do profissional de saúde.</title>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  -->
 <meta http-equiv="Content-Type" content="text/html; charset=latin1"/>
 <script type="text/javascript">

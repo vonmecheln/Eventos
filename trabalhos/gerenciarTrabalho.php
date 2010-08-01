@@ -127,8 +127,7 @@
 	$vetCategoria['Revisão de Literatura'] = 'Revisão de Literatura';
 
 	// vetor com os tipos de apresentação
-	$vetApresentacao['Resumo'] = 'Resumo';
-	$vetApresentacao['Trabalho Completo'] = 'Trabalho Completo';
+	$vetApresentacao['Resumo Expandido'] = 'Resumo Expandido';
 	$vetApresentacao['Painel'] = 'Painel';
 
 ?>
@@ -294,9 +293,6 @@ echo $mensagem ?>
                 <div class="info">
 		            <?php include'menuTrabalhos.php'; ?>
 		        </div>      
-				<div class="info">
-					<?php include'./downloads.php'; ?>
-				</div>
 			</div>
 		</div>
 	</div>
