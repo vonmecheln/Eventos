@@ -12,14 +12,12 @@
 class Modulo_Inscricao extends Sistema_Modulo{
 
 	protected $_modulo = "inscricao";
-
 	
 	/**
 	 * @abstract Ação que altera a senha vinda do formulario
 	 * @return JSON
 	 */	
 	public function ajaxsalvarsenha(){
-		
 		
 		$_POST = Sistema_Util::trataUTF8($_POST);
 		
@@ -42,7 +40,7 @@ class Modulo_Inscricao extends Sistema_Modulo{
 		if($tpp_cod > 0){
 			$dados['tpp_cod']=$tpp_cod;
 		}
-		
+
 		$dados['tpp_nome']=$_POST['tpp_nome'];
 		$dados['tpp_desc']=$_POST['tpp_desc'];
 		$dados['tpp_cracha']=$_POST['tpp_cracha'];
@@ -53,14 +51,25 @@ class Modulo_Inscricao extends Sistema_Modulo{
 		$part = new Classe_Participante();
 		$part->setDados($dados);
 		$a = $part->salvar();
-		
+
+    $tpp_cod = $a['id']['valorid'];
+
+    $vet_boleto_dados = Modulo_Inscricao_Funcoes::CalculaValorBoleto($tpp_cod);
+
+		// criar um boleto no momento em que inscricao eh feita
+		$boleto_classe = new Classe_Boleto();
+		$boleto['bol_valordocumento'] = $vet_boleto_dados['bol_valordocumento'];
+    $boleto['bol_datavencimento'] = $vet_boleto_dados['bol_datavencimento'];
+    $boleto['bol_nossonumero']    = $tpp_cod;
+    $boleto['tpp_cod']            = $tpp_cod;
+		$boleto_classe->setDados($boleto);
+    $boleto_classe->salvar();
+
 		$json = new Sistema_Ajax();
 		$json->addVar("id",$dados['usr_cod']);
 		$json->responde();
-		return $dados['usr_cod'];
-	}
-	
-	
-	
+
+    return $dados['usr_cod']; 
+  }
 }
 ?>

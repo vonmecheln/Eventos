@@ -378,30 +378,32 @@ class Modulo_Impressao extends Sistema_Modulo {
 
 		$sql = "SELECT bol_cod FROM boleto WHERE bol_nossonumero = '$nosso_numero' ";
 
-		$con = Sistema_Conecta::getConexao();
-		$bol_cod = $con->getOne($sql);
-		
-		echo("<pre>");print_r($bol_cod);echo("</pre>");die();
+		$bol_cod = Sistema_Conecta::getOne($sql);
 
 		if($bol_cod){
-				
 			$boleto = new Classe_Boleto($bol_cod);
-
+			$dados = $boleto->getDados();
+				
+			$v = explode("/", $dados['bol_datavencimento']);
+				
+			if($v[2].$v[1].$v[0] < date("Ymd")){
+				$vet_boleto_dados = Modulo_Inscricao_Funcoes::CalculaValorBoleto($nosso_numero);
+				$arr_dados['bol_valordocumento'] = $vet_boleto_dados['bol_valordocumento'];
+				$arr_dados['bol_datavencimento'] = $vet_boleto_dados['bol_datavencimento'];
+				$boleto->setDados($arr_dados);
+				$boleto->salvar();
+				echo("<pre>");print_r($boleto);echo("</pre>");die();
+			}
+				
 			// DADOS DO BOLETO PARA O SEU CLIENTE
-			$dias_de_prazo_para_pagamento = 5;
-			$taxa_boleto = 2.95;
-			$bol_datavencimento = $boleto->getbol_datavencimento();
-			die($bol_datavencimento);
-			$data_venc = date("d/m/Y", time() + ($dias_de_prazo_para_pagamento * 86400));  // Prazo de X dias  OU  informe data: "13/04/2006"  OU  informe "" se Contra Apresentacao;
-			$valor_cobrado = "2950,00"; // Valor - REGRA: Sem pontos na milhar e tanto faz com "." ou "," ou com 1 ou 2 ou sem casa decimal
-			$valor_cobrado = str_replace(",", ".",$valor_cobrado);
-			$valor_boleto=number_format($valor_cobrado+$taxa_boleto, 2, ',', '');
+			$valor_cobrado = str_replace(",", ".",$dados['bol_valordocumento']);
+			$valor_boleto=number_format($valor_cobrado, 2, ',', '');
 
 			$dadosboleto["inicio_nosso_numero"] = "80";  // Carteira SR: 80, 81 ou 82  -  Carteira CR: 90 (Confirmar com gerente qual usar)
-			$dadosboleto["nosso_numero"] = "19525086";  // Nosso numero sem o DV - REGRA: Máximo de 8 caracteres!
-			$dadosboleto["numero_documento"] = "27.030195.10";	// Num do pedido ou do documento
-			$dadosboleto["data_vencimento"] = $data_venc; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
-			$dadosboleto["data_documento"] = date("d/m/Y"); // Data de emissão do Boleto
+			$dadosboleto["nosso_numero"] = $nosso_numero;  // Nosso numero sem o DV - REGRA: Máximo de 8 caracteres!
+			$dadosboleto["numero_documento"] = $nosso_numero;	// Num do pedido ou do documento
+			$dadosboleto["data_vencimento"] = $dados['bol_datavencimento']; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
+			$dadosboleto["data_documento"] = $dados['bol_datadocumento']; // Data de emissão do Boleto
 			$dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do boleto (opcional)
 			$dadosboleto["valor_boleto"] = $valor_boleto; 	// Valor do Boleto - REGRA: Com vírgula e sempre com duas casas depois da virgula
 
@@ -412,7 +414,7 @@ class Modulo_Impressao extends Sistema_Modulo {
 
 			// INFORMACOES PARA O CLIENTE
 			$dadosboleto["demonstrativo1"] = "Pagamento de Compra na Loja Nonononono";
-			$dadosboleto["demonstrativo2"] = "Mensalidade referente a nonon nonooon nononon<br>Taxa bancária - R$ ".number_format($taxa_boleto, 2, ',', '');
+			$dadosboleto["demonstrativo2"] = "Mensalidade referente a nonon nonooon nononon";
 			$dadosboleto["demonstrativo3"] = "BoletoPhp - http://www.boletophp.com.br";
 
 			// INSTRUÇÕES PARA O CAIXA
@@ -450,6 +452,7 @@ class Modulo_Impressao extends Sistema_Modulo {
 			$dadosboleto["cedente"] = "Coloque a Razão Social da sua empresa aqui";
 
 			// NÃO ALTERAR!
+			//echo("<pre>");print_r($dadosboleto);echo("</pre>");
 			include("impressao/include/funcoes_cef.php");
 			include("impressao/include/layout_cef.php");
 
